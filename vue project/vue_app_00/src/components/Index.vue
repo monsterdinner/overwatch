@@ -41,22 +41,22 @@
                                   <img src="http://127.0.0.1:3001/img/card-overwatch.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-world-of-warcraft.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-world-of-warcraft.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-hearthstone.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-hearthstone.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-heroes-of-the-storm.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-heroes-of-the-storm.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-starcraft.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-starcraft.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-starcraft-remastered.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-starcraft-remastered.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                               <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-diablo.jpg" class="Navbar-posterImage" alt=""/>
+                                  <img src="../img/card-diablo.jpg" class="Navbar-posterImage" alt=""/>
                               </a>
                           </nav>
                       </div>
@@ -71,34 +71,34 @@
               <div class="navbar-modalContent">
                   <div class="navbar-esportsLogos" >
                       <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="http://127.0.0.1:3001/img/esports-ow.png" alt=""/>
+                          <img src="../img/esports-ow.png" alt=""/>
                           <div class="navbar-esportLabel" >守望先锋电竞</div>
                       </a>
                       <div class="navbar-esport-sub">
                           <a href="#" class="navbar-esport-link">
-                              <img src="http://127.0.0.1:3001/img/esports-overwatch.png" alt=""/>
+                              <img src="../img/esports-overwatch.png" alt=""/>
                           </a>
                           <a href="#" class="navbar-esport-link">
-                              <img src="http://127.0.0.1:3001/img/esports-overwatch-world-cup.png" alt=""/>
+                              <img src="../img/esports-overwatch-world-cup.png" alt=""/>
                           </a>
                           <a href="#" class="navbar-esport-link">
-                              <img src="http://127.0.0.1:3001/img/esports-contenders.png" alt=""/>
+                              <img src="../img/esports-contenders.png" alt=""/>
                           </a>
                       </div>
                       <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="http://127.0.0.1:3001/img/esports-gold.png" alt=""/>
+                          <img src="../img/esports-gold.png" alt=""/>
                           <div class="navbar-esportLabel">炉石传说黄金系列赛</div>
                       </a>
                       <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="http://127.0.0.1:3001/img/esports-heroes.png" alt=""/>
+                          <img src="../img/esports-heroes.png" alt=""/>
                           <div class="navbar-esportLabel">HGC黄金风暴联赛</div>
                       </a>
                       <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="http://127.0.0.1:3001/img/esports-sc2-wcs.png" alt=""/>
+                          <img src="../img/esports-sc2-wcs.png" alt=""/>
                           <div class="navbar-esportLabel">星际争霸II黄金职业联赛</div>
                       </a>
                       <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="http://127.0.0.1:3001/img/wariii .png" alt=""/>
+                          <img src="../img/wariii .png" alt=""/>
                           <div class="navbar-esportLabel">魔兽争霸III黄金联赛</div>
                       </a>
                   </div>
@@ -144,7 +144,7 @@
      </div>
      <div class="column row ">
          <div class="show-for-xl u-relative">
-             <img src="http://127.0.0.1:3001/img/logo-overwatch-full.png" alt="" class="home-header__logo"/>
+             <img src="../img/logo-overwatch-full.png" alt="" class="home-header__logo"/>
          </div>
          <div class="u-relative">
              <h2 class="h3 home-header__tagline">“年度最佳运营游戏奖” - The Game Awards</h2>
@@ -170,7 +170,7 @@
          <div class="grid-item">
              <div class="box">
                  <div class="container">
-                     <a href="#" class="bg" style="background: url(img/images0001e.jpg);"></a>
+                     <a href="#" class="bg" style="background-image: url(../img/images0001e.jpg);"></a>
                      <div class="content">
                          <h3 class="title h6">
                              <a href="#" >
@@ -184,7 +184,7 @@
          <div class="grid-item">
              <div class="box">
                  <div class="container">
-                     <a href="#" class="bg" style="background: url(img/images3ae.jpg);"></a>
+                     <a href="#" class="bg" style="background: url(../img/images3ae.jpg);"></a>
                      <div class="content">
                          <h3 class="title h6">
                              <a href="#">
@@ -198,40 +198,149 @@
          <a href="#" class="button m-blue m-wide intro-button">查看所有新闻</a>
      </div>
  </section>
- <section class="fight-section">
-     <div class="bg-cairo bg-fftf"></div>
-     <div class="bg-volskaya bg-fftf"></div>
-     <div class="bg-london bg-fftf"></div>
-     <div class="inner">
-         <h2 class="intro-heading">为未来而战</h2>
-         <p class="intro-text u-align-center u-center-block">
-             军人、科学家、冒险家、奇人异士。
-             <br/><br/>
-             在人类陷入空前危机之时，来自全球各个国家的特种精英们，为了结束战争、重铸秩序而团结在了一起。他们，就是
-             <strong>守望先锋</strong>
-             <br/><br/>
-             英雄们最终结束了这场危机，人类文明在随后的数十年内和平共存并迎来了一个探索、革新和发现的新时代。尽管如此，守望先锋在多年后逐渐被人们所遗忘，最终难逃被解散的命运。
-             <br/><br/>
-         </p>
-         <p class="intro-text u-align-center u-center-block">
-             如今，世界各地争端再起，人们都翘首期待着新英雄的出现，或旧英雄的归来。
-             <br/><br/>
-             你愿意与我们共同抗争吗？
-         </p>
-         <a href="#" class="button m-lg">搜索游戏</a>
+<section class="fight-section">
+    <div class="bg-cairo bg-fftf"></div>
+    <div class="bg-volskaya bg-fftf"></div>
+    <div class="bg-london bg-fftf"></div>
+    <div class="inner">
+        <h2 class="intro-heading">为未来而战</h2>
+        <p class="intro-text u-align-center u-center-block">
+            军人、科学家、冒险家、奇人异士。
+            <br/><br/>
+            在人类陷入空前危机之时，来自全球各个国家的特种精英们，为了结束战争、重铸秩序而团结在了一起。他们，就是
+            <strong>守望先锋</strong>
+            <br/><br/>
+            英雄们最终结束了这场危机，人类文明在随后的数十年内和平共存并迎来了一个探索、革新和发现的新时代。尽管如此，守望先锋在多年后逐渐被人们所遗忘，最终难逃被解散的命运。
+            <br/><br/>
+        </p>
+        <p class="intro-text u-align-center u-center-block">
+            如今，世界各地争端再起，人们都翘首期待着新英雄的出现，或旧英雄的归来。
+            <br/><br/>
+            你愿意与我们共同抗争吗？
+        </p>
+        <a href="#" class="button m-lg">搜索游戏</a>
+    </div>
+</section>
+<section class="heroes-section">
+    <div class="row column">
+        <div class="u-max-width-container">
+            <h2 class="intro-heading">各具特色的英雄</h2>
+            <div class="intro-text">
+                <p>
+                    不论喜欢哪种游戏方式，你总能找到适合自己玩法的英雄。
+                    <br/>
+                    掌握他们独特的技能玩法，享受《守望先锋》的无穷乐趣！
+                </p>
+            </div>
+        </div>
+        <div class="full-width-container">
+            <div class="spotlight">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <h2 class="spotlight-header">D.Va</h2>
+                        <p class="spotlight-caption">一名前职业玩家，而现在则利用自己的技巧驾驶一台尖端机甲保卫国家。</p>
+                    </div>
+                </div>
+                <div class="u-max-width-container">
+                    <div class="spotlight-image" style="background-image: url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/dva.png);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-max-width-container">
+            <ul class="hero-portrait-group">
+                <li class="u-inline-block u-relative">
+                    <a href="#" class="hero-portrait">
+                      <div class="hero-portrait-image-mask">
+                        <div class="hero-portrait-image" :style="dva"></div>
+                      </div>
+                        <span class="hero-portrait-label">D.Va</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+ <section class="mountain-city"></section>
+ <section class="prepurchase-section-desktop bg-museum content-box show-for-lg">
+     <div class="fg-widowmaker-shoulder-rifle"></div>
+     <div class="page-wrapper" style="margin-bottom: 150px;">
+         <div class="row">
+             <div class=" lg-6 lg-offset-6 xl-5 xl-offset-6">
+                 <h2 class="intro-heading-gradient-blue">这个世界需要英雄</h2>
+                 <p class="intro-text">现在即是未来，你来吗？</p>
+                 <a href="#" class="button m-lg" style="margin-top: 0;">立即购买</a>
+             </div>
+         </div>
      </div>
  </section>
- </div>
+<div id="footer" class="ow-footer">
+    <div class="footer">
+        <div id="f-business" class="f-cb">
+            <p class="f-cs">
+                <a href="#">
+                    <span class="icon icon-1"></span>在线客服
+                </a>
+                <a href="#">
+                    <span class="icon icon-2"></span>反馈
+                </a>
+                <a href="#">
+                    <span class="icon icon-3"></span>加入我们
+                </a>
+            </p>
+        </div>
+        <div class="cprt">
+            <a href="#" class="logo_bz">
+                <a href="#" class="logo_ne"></a>
+            </a>
+            <div class="info">
+                <ul class="clearFix">
+                    <li>
+                        <a href="#">隐私</a>
+                    </li>
+                    <li>
+                        <a href="#">法律条款</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                </ul>
+                <p>©2018 暴雪娱乐有限公司版权所有
+                <span>由上海网之易网络科技发展有限公司运营</span>
+               <a href="#"> 著作权侵权</a>
+                    &nbsp;|&nbsp;
+         <span>新广出审[2016]378号</span>
+                </p>
+                <p><span id="js_wenjinwang">文网游进字[2016]0025号</span>&nbsp;|&nbsp;<a href="#" >沪网文号〔2017〕9633-727号</a>&nbsp;|&nbsp;<a href="#" >增值电信业务经营许可证编号：沪B2－20080012</a></p>
+                <p class="integrity">
+                    <a href="#"><img src="../img/cprtFpolice.png" alt=""/></a>
+                    <a href="#"><img src="../img/cprtFzx110.png" alt=""/></a>
+                    <a href="#"><img src="../img/sgs-icon.png" alt=""/></a>
+                    <a href="#"><img src="../img/cprtFicon20120516.png" alt=""/></a>
+                    <a href="#"><img src="../img/cprtFemark.png" alt=""/></a>
+                    <span>|  适龄提示：适合13岁及以上使用  </span>
+                    <a href="#">家长监护工程></a>
+                </p>
+            </div>
+            <div></div>
+        </div>
+        <p class="tips">
+            积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。
+        </p>
+    </div>
+</div>
+</div>
 </template>
-<script>
+<script type="text/ecmascript-6">
  export default{
+
         data(){
             return{
              fal:false,
              fal1:false,
              fal2:false,
              fal3:false,
-             youj:{}
+             youj:{},
+             dva:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/dva/icon-portrait.png)"
             };
         },
         methods:{
@@ -301,6 +410,17 @@
     color: #fff;
     z-index: 10000;
 }
+.heroes-section p{
+    color: #333;
+}
+.prepurchase-section-desktop p{
+    color: #333;
+}
+.spotlight-caption, .spotlight-header {
+    color: #f0edf2!important;
+    padding-left: 64%;
+    text-align: center;
+}
 .navbar:after{
     content: ' ';
     position: absolute;
@@ -333,7 +453,7 @@
 .navbar-logo{
     height: 40px;
     width: 62px;
-    background-image: url(http://127.0.0.1:3001/img/tubiao%20.png);
+    background-image: url("../img/tubiao.png");
     background-repeat: no-repeat;
     background-position: -18px -75px;
     margin-right: 30px;
@@ -377,7 +497,7 @@
 .navbar-icon{
     width: 14px;
     height: 7px;
-    background-image: url(http://127.0.0.1:3001/img/tubiao.png);
+    background-image:url("../img/tubiao.png");
     background-position: -147px -131px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -753,7 +873,7 @@ text-align: center;
     width: 1.5em;
     height: 1.5em;
     margin-right: 5px;
-    background-image: url("http://127.0.0.1:3001/img/1%252Ffsbnet%252Ficon-sprite.png");
+    background-image: url("../img/tubiao.png");
     background-repeat: no-repeat;
     position: relative;
     box-sizing: border-box;
@@ -804,7 +924,7 @@ text-align: center;
 .nav-logo{
     width: 245px;
     height: 62px;
-    background: url("http://127.0.0.1:3001/img/nav-logo-sm.png") no-repeat center center;
+    background: url("../img/nav-logo-sm.png") no-repeat center center;
     display: inline-block;
 }
 .nav-menu{
@@ -844,7 +964,7 @@ text-align: center;
 }
 .m-has-children:after{
     content: "";
-    background-image: url(http://127.0.0.1:3001/img/caret-gray.png);
+    background-image: url(../img/caret-gray.png);
     width: 12px;
     height: 7px;
     background-position: 50%;
@@ -1057,7 +1177,7 @@ text-align: center;
     height: 20px;
     padding-right: 8px;
     display: inline-block;
-    background: url("http://127.0.0.1:3001/img/arraw.png") no-repeat 0 -50px;
+    background: url("../img/arraw.png") no-repeat 0 -50px;
 }
 .m-white:hover{
     border-color: #fff;
@@ -1124,7 +1244,7 @@ text-align: center;
     bottom: 3px;
     border-radius: 3px;
 }
-.bg{
+.news-panels .grid-item .bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1161,7 +1281,6 @@ text-align: center;
     color: #f0edf2;
 }
 .fight-section{
-
     background: 0 0;
     color: #f0edf2;
     text-shadow: 1px 2px 3px  rgba(51,51,51,.5);
@@ -1188,10 +1307,10 @@ text-align: center;
 .bg-cairo{
     background-size: cover;
     background-position: center top;
-    background-image: url("http://127.0.0.1:3001/img/cairo-desktop1.jpg");
+    background-image: url("../img/cairo-desktop1.jpg");
 }
 .navbar-desktopOverlay{
-    display: black;
+    display:block;
     animation-duration: 200ms;
     position: fixed;
     top: 0;
@@ -1200,5 +1319,499 @@ text-align: center;
     right: 0;
     background-color: rgba(0,0,0,.5);
     }
+.bg-volskaya{
+    background-size: cover;
+    background-position: center top;
+    background-image: url("../img/volskaya.jpg");
+    display: none;
+}
+.bg-london{
+    background-size: cover;
+    background-position: center top;
+    background-image: url("../img/london-2560.jpg");
+    display: none;
+}
+.intro-heading{
+    text-shadow: 0 4px 5px rgba(60,72,96,.5);
+    margin-bottom: 44px;
+    text-transform: none;
+    font-style: italic;
+    font-size: 5.8rem;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: normal;
+    letter-spacing: .8px;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+}
+.intro-text{
+    line-height: 1.47;
+    margin-bottom: 3.6rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-top: .5em;
+    color: inherit;
+}
+.intro-text p{
+    font-size: 2.4rem;
+    line-height: 1.6;
+}
+.h2, h2 {
+    font-size: 5.8rem;
+}
+.u-align-center {
+    text-align: center;
+}
+.u-center-block {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.m-lg{
+    margin-top: 30px;
+    font-size: 2rem;
+    padding: 6px 30px;
+    color: #fefefe;
+}
+.footer a {
+    text-decoration: none;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: 400;
+}
+a {
+    text-decoration: underline;
+}
+.ow-footer{
+    height: 358px;
+    background: #202020;
+}
+#footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 26px;
+    width: auto;
+    z-index: 3;
+    font-size: 12px !important;
+}
+.ow-footer #f-business {
+    padding-top: 40px;
+}
+#f-business {
+    width: 1000px;
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    color: #fff;
+    z-index: 100;
+    padding-top: 79px;
+    font-size: 14px;
+}
+.ow-footer #f-business {
+    padding-top: 40px;
+}
+#f-business .f-cs {
+    float: left;
+    font-size: 14px;
+}
+#f-business .f-cs a {
+    color: #fff;
+    margin-right: 37px;
+    vertical-align: middle;
+}
+.ow-footer #f-business .icon {
+    background: url(../img/sprite-24-blue.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    top: -2px;
+}
+#f-business .icon-1, #f-business .icon-2, #f-business .icon-3 {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+.icon-1{
+    background-position: -96px 0;
+}
+.icon-2{
+    background-position: -144px -24px;
+}
+.icon-3{
+    background-position: -24px -119px;
+}
+.cprt{
+    clear: both;
+    padding-top: 50px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.footer .cprt {
+    text-align: left;
+    width: 1000px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+.ow-footer .logo_bz {
+    background: url(../img/layoutblizzard.png) no-repeat 0 0;
+    top: 4px;
+}
+.footer .logo_bz {
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    margin: 0;
+    position: relative;
+}
+.footer .cprt .info ul li {
+    float: left;
+    list-style: none;
+}
+.footer .logo_ne{
+    display: inline-block;
+    background: url(../img/logo_ne.png) no-repeat 0 0;
+    width: 125px;
+    height: 38px;
+    overflow: hidden;
+    vertical-align: top;
+    position: relative;
+    top: 39px;
+    margin: 0;
 
+}
+.ow-footer .cprt .info, .ow-footer .cprt .info a {
+    color: rgba(255,255,255,.5);
+}
+.footer .cprt .info {
+    width: 706px;
+    float: right;
+    text-align: left;
+    padding: 0 0 0 73px;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.footer .cprt .info ul {
+    margin: 0 0 0 -10px;
+    padding: 0 0 5px;
+    overflow: hidden;
+    list-style: none;
+}
+.ow-footer .cprt .info ul {
+    margin-bottom: 3px;
+}
+.ow-footer .cprt .info p {
+    line-height: 20px;
+    vertical-align: top;
+}
+.footer .info p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 20px;
+    font-weight: 400;
+}
+.ow-footer .cprt .info p {
+    line-height: 20px;
+    vertical-align: top;
+}
+.footer .info p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 20px;
+    font-weight: 400;
+}
+.footer .integrity a {
+    margin-right: 5px;
+}
+.ow-footer .tips {
+    color: rgba(255,255,255,.3);
+}
+.footer .tips {
+    text-align: center;
+    clear: both;
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+}
+.heroes-section{
+    text-align: center;
+    background: url(../img/candy.jpg) no-repeat top;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.row{
+    float: none;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row:after {
+    clear: both;
+}
+.row:after, .row:before {
+    content: ' ';
+    display: table;
+    flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+.u-align-center{
+    text-align: center;
+}
+.column{
+    width: 100%;
+    padding-left:0;
+    padding-right: 0;
+}
+.u-max-width-container{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.u-max-width-container .intro-heading{
+    text-shadow: 0 4px 5px rgba(60,72,96,.5);
+    margin-bottom: 44px;
+    text-transform: none;
+    font-style: italic;
+    color:#3f6493;
+}
+.intro-text {
+    font-size: 2.4rem;
+}
+p {
+    font-size: inherit;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+}
+.prepurchase-section-desktop .intro-text {
+    line-height: 1.47;
+    margin-bottom: 3.6rem;
+}
+.xl-offset-6 {
+    margin-left: 50%;
+}
+.xl-5 {
+    width: 41.66667%;
+}
+.intro-text{
+    max-width: 40em;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.47;
+    margin-bottom: 3.6rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: inherit;
+}
+.spotlight{
+    position: relative;
+    text-shadow: 0 0 1px #405275;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+.body.home .spotlight:before {
+    content: '';
+    position: absolute;
+    top: 59%;
+    left: 0;
+    right: 0;
+    padding-top: 28.07%;
+    background-image: url(../img/glow.png);
+    background-size: cover;
+}
+.flex-container{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 200px;
+    position: absolute;
+    padding: 10px 0 15px;
+    top: calc(50% - 100px);
+    text-align: right;
+    background-image: linear-gradient(90deg,rgba(42,55,81,0) 0,rgba(42,55,81,.8) 25%,rgba(42,55,81,.8) 75%,rgba(42,55,81,0));
+    background-position: 50%;
+    background-size: 1920px auto;
+    z-index: 0;
+}
+.flex-item{
+    -webkit-box-flex:0 ;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    padding: 0 30px;
+    width: 100%;
+    max-width: 1250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.spotlight-header{
+    color: #f0edf2;
+    padding-left: 64%;
+    text-align: center;
+    text-shadow: 0 1px 2px #000;
+    font-size: 5.8rem;
+    font-style: italic;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: normal;
+    letter-spacing: .8px;
+
+}
+.spotlight-caption{
+    color: #f0edf2;
+    padding-left: 64%;
+    text-align: center;
+    min-height: 48px;
+    margin-top: .5em;
+
+}
+.spotlight-image{
+    position: relative;
+    left: -270px;
+    display: inline-block;
+    min-width: 746px;
+    min-height: 440px;
+    margin: 0 auto;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    z-index: 0;
+}
+.hero-portrait-group{
+    padding: 0;
+}
+.u-inline-block{
+    display: inline-block;
+}
+. u-relative{
+    position: relative;
+}
+.hero-portrait{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2rem;
+    transition: all .1s cubic-bezier(.19,1,.22,1);
+}
+.hero-portrait-image-mask{
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 84px;
+    margin: 2.4px 6px;
+    border: 3px solid #f0edf2;
+    background-color: rgba(51,51,51,.9);
+    background-clip: padding-box;
+    overflow: hidden;
+    border-radius: 7px;
+    transform: skew(25rad);
+
+}
+.hero-portrait-image{
+    display: inline-block;
+    width: calc(100% + 10px);
+    height: 100%;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    position: relative;
+    transform: skew(-25rad) translateX(-5px);
+}
+.hero-portrait-label{
+    position: relative;
+    display: inline-block;
+    top: -4.2px;
+    margin-left: -10px;
+    padding: 1px 10px;
+    font-size: 1.3rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+.hero-portrait:hover{
+    transition: all 110ms cubic-bezier(.075,.82,.165,1);
+    outline: 0;
+    color: #f9ab4f;
+}
+.mountain-city{
+    background-attachment: fixed;
+    min-height: 33.5rem;
+    background-position: center 16%;
+    background-image: url(../img/dorado-desktop.jpg);
+    background-size: cover;
+}
+.prepurchase-section-desktop{
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,.4);
+}
+.bg-museum {
+    background-image: url(../img/bg-museum.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.content-box{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.fg-widowmaker-shoulder-rifle{
+    width: 50%;
+    height: 118%;
+    background-image: url(../img/widowmaker-default-mobile.png);
+    background-size: 100% auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center top;
+}
+.page-wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.fg-widowmaker-shoulder-rifle .column{
+    width: 100%;
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+.xl-5{
+    width: 41.66667%;
+}
+.xl-offset-6{
+    margin-left: 50%;
+}
+.prepurchase-section-desktop .intro-text{
+    line-height: 1.47;
+    margin-bottom: 3.6rem;
+}
+.intro-heading-gradient-blue {
+    text-shadow: 0 4px 5px rgba(60,72,96,.5);
+    color: #3f6493;
+    font-size: 5.8rem;
+}
+.h2, h2 {
+    font-size: 3.90625rem;
+    font-style: italic;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: normal;
+    letter-spacing: .8px;
+}
 </style>
