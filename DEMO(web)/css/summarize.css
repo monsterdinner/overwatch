@@ -1,0 +1,316 @@
+.body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+body {
+    color: #333;
+    fill: #333;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #f0edf2;
+    max-width: 100%;
+    overflow-x: hidden;
+    font: normal normal normal 10px "microsoft yahei",Arial,sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+.game .h2, h2 {
+    font-size: 5.8rem;
+}
+.overview-section{
+    background-image: url(../img/bg-welcometooverwatch-3.jpg);
+    text-align: left;
+    background-position: 25% top;
+    position: relative;
+    padding-bottom: 200px;
+    z-index: 1;
+    padding-top: 150px;
+    background-size:cover;
+    border-bottom: 5px solid hsla(0,0%,100%,.5);
+}
+.u-font-shadow{
+    text-shadow: 1px 2px 3px rgba(51,51,51,.5);
+}
+.page-wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.intro-row{
+    margin-top: 8rem;
+}
+.row{
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row:after, .row:before {
+    content: ' ';
+    display: table;
+    flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+.game .lg-6{
+    width: 50%;
+}
+.lg-push-6{
+    position: relative;
+    left: 50%;
+}
+.lg-pull-6{
+    position: relative;
+    left: -50%;
+}
+.game .u-invert{
+    color: #f0edf2;
+}
+.game .column{
+    float: left;
+}
+p+p {
+    margin-top: 1em;
+}
+.game-description{
+    margin-left: 0;
+    margin-right: auto;
+}
+.u-invert{
+    color: #f0edf2;
+}
+#overview-section .intro-text {
+    line-height: 1.47;
+    margin-bottom: 3.6rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-top: .5em;
+}
+.column:last-child:not(:first-child){
+    float: right;
+    text-align: left;
+}
+.u-limit-width{
+
+}
+.overwatch-trailer{
+    margin-right: 30px;
+    margin-bottom: 0;
+    max-width: 540px;
+}
+.media-thumbnail{
+    border: 4px solid rgba(255,255,255,.5);
+    border-radius: 3px;
+    display: block;
+    text-decoration: none;
+}
+.media-thumbnail>.wrap {
+    position: relative;
+    overflow: hidden;
+}
+.media-thumbnail>.wrap:before {
+    content: '';
+    display: block;
+    height: 0;
+    padding-top: 56.25%;
+}
+.media-thumbnail.m-playable>.wrap:after, .media-thumbnail.m-viewable>.wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13% auto;
+}
+.media-thumbnail.m-playable>.wrap:after {
+    background-image: url(../img/youtube-btn-ylw.png);
+}
+.media-thumbnail>.wrap>.media {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+body.game .heroes-section:not(li):not(li) {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+.u-border-separator, body.game .abilities-section:not(li), body.game .friends-section:not(li), body.game .game-modes-section:not(li), body.game .heroes-section:not(li), body.game .maps-section:not(li), body.game .match-section:not(li), body.game .overview-section:not(li), body.game .progress-section:not(li), body.game .role-section:not(li) {
+    border-bottom: 5px solid hsla(0,0%,100%,.5);
+}
+.left-team-image{
+    background-image: url(../img/game_teams_left.png);
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: calc(100% + 60px);
+    width: 60%;
+    background-position: left bottom;
+    background-size: auto 100%;
+    z-index: -1;
+}
+.right-team-image{
+    background-image: url(../img/game_teams_right.png);
+    position: absolute;
+    right: 0;
+    top: -60px;
+    height: calc(100% + 60px);
+    width: 50%;
+    background-position: left bottom;
+    background-size: auto 100%;
+    z-index: -1;
+}
+.heroes-section .u-align-center {
+    text-align: center;
+}
+.u-limit-width {
+    max-width: 40em;
+}
+.card>.caption>.heading, .u-invert {
+    color: #f0edf2;
+}
+.u-font-large {
+    font-size: 2.2rem;
+}
+.u-center-block {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+body.game .heroes-section:not(li) .button {
+    margin-top: 40px;
+}
+.btn.m-lg, .btn.m-wide, .button.m-lg, .button.m-wide, button.m-lg, button.m-wide {
+    font-size: 2rem;
+}
+.btn.m-wide, .button.m-wide, button.m-wide {
+    color: #fefefe;
+    font-size: 2rem;
+    padding: 7.5px 65px;
+}
+.u-pseudo-background:before, body.game .heroes-section:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#heroes-section{
+    padding-top: 0;
+}
+body.game .heroes-section:not(li) .overwatch-logo, body.game .heroes-section:not(li) .overwatch-logo-mini {
+    width: 320px;
+    position: relative;
+    top: -40px;
+    margin-bottom: -40px;
+    max-width: 90%;
+}
+.u-center-block {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+body.game .overview-section:not(li) {
+    text-align: left;
+}
+.AboutRole-section {
+    background-color: #000;
+}
+.AboutRole-section-container {
+    background: linear-gradient(#fafafa,#e0e0e0);
+}
+.content-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.AboutRole-section-title {
+    color: #585858;
+}
+.u-align-center {
+    text-align: center;
+}
+.h1, h1 {
+    font-size: 7.62939rem;
+}
+.AboutRole-column, .AboutRole-row {
+    padding-top: 50px;
+}
+.AboutRole-column:first-child {
+    padding-top: 0;
+}
+.AboutRole-column {
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.lg-4 {
+    width: 33.33333%;
+}
+.AboutRole-name--tank {
+    color: #f8a22d;
+}
+.AboutRole-name {
+    text-align: center;
+    padding-top: 15px;
+}
+.h4, h4 {
+    font-size: 2.5rem;
+}
+.h4, h4 {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    font-variant: normal;
+    line-height: normal;
+}
+.AboutRole-description {
+    padding-top: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+.u-align-left\@lg-min {
+    text-align: left;
+}
+.AboutRole-name--damage {
+    color: #e71d26;
+}
+.AboutRole-name--support {
+    color: #00a345;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.AboutRole-icon {
+    display: block;
+    width: 170px;
+    height: 196px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.AboutRole-section-container {
+    background: linear-gradient(#fafafa,#e0e0e0);
+}
+.content-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}

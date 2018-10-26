@@ -127,8 +127,6 @@
                  isSubShow1:false,
                  isSubShow2:false,
                  isSubShow3:false
-
-
             };
         },
         methods:{

@@ -860,13 +860,10 @@ text-align: center;
     transform: translate(-50%,-50%);
 }
 .heroes-section .column{
-    padding-left: 24px;
-    padding-right: 24px;
-    text-align: center;
-    width: 100%
-max-width: none;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
 }
 .row:before{
     content: ' ';
@@ -1298,6 +1295,22 @@ p a {
     background-size: cover;
     padding-top: 80px;
     padding-bottom: 80px;
+}
+#gotop {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    display: none;
+    cursor: pointer;
 }
 .row{
     float: none;

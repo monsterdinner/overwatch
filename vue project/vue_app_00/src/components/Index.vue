@@ -237,23 +237,23 @@
             <div class="spotlight">
                 <div class="flex-container">
                     <div class="flex-item">
-                        <h2 class="spotlight-header">D.Va</h2>
-                        <p class="spotlight-caption">一名前职业玩家，而现在则利用自己的技巧驾驶一台尖端机甲保卫国家。</p>
+                        <h2 class="spotlight-header">{{minzi}}</h2>
+                        <p class="spotlight-caption">{{jieshao}}</p>
                     </div>
                 </div>
                 <div class="u-max-width-container">
-                    <div class="spotlight-image" style="background-image: url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/dva.png);"></div>
+                    <div class="spotlight-image" :style="bgRenwu"></div>
                 </div>
             </div>
         </div>
         <div class="u-max-width-container">
             <ul class="hero-portrait-group">
-                <li class="u-inline-block u-relative">
-                    <a href="#" class="hero-portrait">
+                <li class="u-inline-block u-relative" v-for="(item,index) in hero" @mouseover="heroFor(index)" :key="index">
+                    <a href="" class="hero-portrait"  :class="{ isactive: index==ishas }">
                       <div class="hero-portrait-image-mask">
-                        <div class="hero-portrait-image" :style="dva"></div>
+                        <div class="hero-portrait-image" :style="item.head"></div>
                       </div>
-                        <span class="hero-portrait-label">D.Va</span>
+                        <span class="hero-portrait-label">{{item.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -289,16 +289,15 @@
             </p>
         </div>
         <div class="cprt">
-            <a href="#" class="logo_bz">
-                <a href="#" class="logo_ne"></a>
-            </a>
+            <a href="#" class="logo_bz"></a>
+               <a href="#" class="logo_ne"></a>
             <div class="info">
                 <ul class="clearFix">
                     <li>
-                        <a href="#">隐私</a>
+                        <a href="#">隐私</a>|
                     </li>
                     <li>
-                        <a href="#">法律条款</a>
+                        <a href="#">法律条款</a>|
                     </li>
                     <li>
                         <a href="#">API</a>
@@ -331,6 +330,7 @@
 </div>
 </template>
 <script type="text/ecmascript-6">
+
  export default{
 
         data(){
@@ -340,10 +340,190 @@
              fal2:false,
              fal3:false,
              youj:{},
-             dva:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/dva/icon-portrait.png)"
-            };
+             hero:[
+                 {
+                 name:"D.Va",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/dva/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/dva.png)",
+                 brief:"一名前职业玩家，而现在则利用自己的技巧驾驶一台尖端机甲保卫国家。"
+                 },
+                  {
+                 name:"奥丽莎",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/orisa/icon-portrait.png)",
+                 body:"background-image: url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/orisa.png)",
+                 brief:"维护努巴尼秩序并保护努巴尼人民的维和机器人。"
+                 },
+                  {
+                 name:"莱因哈特",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/reinhardt/icon-portrait.png)",
+                body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/genji.png)",
+                 brief:"一名属于过去的勇士，时刻铭记着骑士的信条：无畏、公正、勇敢。"
+                 },
+                  {
+                 name:"路霸",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/roadhog/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/roadhog.png)",
+                 brief:"一名残暴的杀手，因残忍和肆意破坏而臭名昭著。"
+                 },
+                  {
+                 name:"温士顿",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/winston/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/winston.png)",
+                 brief:"一只经过基因改造，拥有高等智慧的大猩猩，也是一位出色的科学家和代表着人类潜力的勇士。"
+                 },
+                  {
+                 name:"查莉娅",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/zarya/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/zarya.png)",
+                 brief:"世界上最强壮的女性之一。为了保卫祖国，毅然放弃了个人荣誉。"
+                 },
+                  {
+                 name:"破坏球",
+                 head:"background-image:url(http://overwatch.nosdn.127.net/1/images/heroes/wrecking-ball/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/wrecking-ball.png)",
+                 brief:"驾驶这台滚动式坦克的是一只经过基因改造的仓鼠，他来自月球基地。"
+                 },
+                  {
+                 name:"堡垒",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/bastion/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/bastion.png)",
+                 brief:"一名可以切换形态的机器人，为自然着迷而探索世界，同时也对人类保持着戒心。"
+                 },
+                 {
+                 name:"末日铁拳",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/doomfist.png)",
+                 brief:"一位利用个人头脑、魅力和蛮力来创建一个更强大世界的战术家。"
+                 },
+                  {
+                 name:"源氏",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/genji/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/genji.png)",
+                 brief:"一名致命的半机械忍者，通过他的机械躯体寻得了身心的和谐。"
+                 },
+                  {
+                 name:"半藏",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/hanzo/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/hanzo.png)",
+                 brief:"一名强大而致命的弓箭大师。"
+                 },
+                  {
+                 name:"狂鼠",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/junkrat/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/junkrat.png)",
+                 brief:"一名满脑子都是爆炸的变态疯子，只为了混乱和破坏而活。"
+                 },
+                  {
+                 name:"麦克雷",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/mccree/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/mccree.png)",
+                 brief:"一名亡命天涯的神枪手，以自己的方式伸张正义。"
+                 },
+                  {
+                 name:"美",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/frost/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/mei.png)",
+                 brief:"一名能够操控天气，为了保护环境而选择战斗的科学家。"
+                 },
+                  {
+                 name:"法老之鹰",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/pharah/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/pharah.png)",
+                 brief:"一名恪守岗位的战士，用实验性的“猛禽”作战服确保天空的安全。"
+                 },
+                  {
+                 name:"死神",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/reaper/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/reaper.png)",
+                 brief:"一名无情的杀手，一直在追杀前守望先锋的特工们。"
+                 },
+                 {
+                 name:"士兵76",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/soldier-76/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/soldier-76.png)",
+                 brief:"一名试图自己将守望先锋敌人绳之于法的独行侠。"
+                 },
+                  {
+                 name:"黑影",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/sombra/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/sombra.png)",
+                 brief:"臭名昭著的黑客，沉迷于揭秘——及其带来的权力。"
+                 },
+                  {
+                 name:"秩序之光",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/symmetra/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/symmetra.png)",
+                 brief:"一名通过控制高强度光束，将世界改造成她心目中完美、有序的模样的光子建筑师。"
+                 },
+                  {
+                 name:"托比昂",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/torbjorn/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/torbjorn.png)",
+                 brief:"一名天才工程师，可以在战场上打造武器系统。"
+                 },
+                  {
+                 name:"裂空",
+               head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/tracer/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/tracer.png)",
+                 brief:"一名前守望先锋特工，同时也是可以穿梭时间的充满正义的冒险家。"
+                 },
+                  {
+                 name:"黑百合",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/widowmaker/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/widowmaker.png)",
+                 brief:"一名完美的杀手：耐心、果断、无情。没有任何情感且事后毫无悔意。"
+                 },
+                  {
+                 name:"安娜",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/ana/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/ana.png)",
+                 brief:""
+                 },
+                  {
+                 name:"布里吉塔",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/brigitte/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/brigitte.png)",
+                 brief:"一位渴望冒险，希望惩强扶弱的重装战士。"
+                 },
+                    {
+                 name:"卢西奥",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/lucio/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/lucio.png)",
+                 brief:"一位国际名人，通过音乐和巡演激发社会正能量。"
+                 },
+                  {
+                 name:"天使",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/mercy/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/mercy.png)",
+                 brief:"一名集顶尖的治疗者、出色的科学家和坚定的和平主义者于一身的守护天使。"
+                 },
+                  {
+                 name:"莫伊卡",
+                 head:"background-image:url(http://overwatch.nos.netease.com/1/assets/images/hero/moira/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/moira-full-portrait.png)",
+                 brief:"一位天才基因科学家，无视道德的束缚，一心追求科学发现。"
+                 },
+                  {
+                 name:"禅雅塔",
+                head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/zenyatta/icon-portrait.png)",
+                 body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/zenyatta.png)",
+                 brief:"一位游走于世界寻找灵魂升华之道的机械僧侣。"
+                 },
+
+             ],
+             ishas:0,
+             minzi:"",
+             jieshao:"",
+             bgRenwu:{}
+            }
         },
         methods:{
+            heroFor(index){
+               this.ishas=index;
+               this.jieshao=this.hero[index].brief;
+               this.minzi=this.hero[index].name;
+               this.bgRenwu=this.hero[index].body;
+            },
               shownav(){
                if(this.fal==false){
                this.fal=true;
@@ -384,7 +564,11 @@
                },
                leave(){
                this.youj={backgroundPosition:"0 -50px"}
-               }
+               },
+
+        },
+        watch:{
+          
         },
         created(){
 
@@ -395,6 +579,20 @@
    }
  </script>
 <style>
+.hero-portrait.isactive>.hero-portrait-image-mask, .hero-portrait:active>.hero-portrait-image-mask, .hero-portrait:focus>.hero-portrait-image-mask, .hero-portrait:hover>.hero-portrait-image-mask {
+    width: 84px;
+    height: 100.8px;
+    margin: -6px -1px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    background-color: #f7931e;
+}
+.hero-portrait.is-active>.hero-portrait-label, .hero-portrait:active>.hero-portrait-label, .hero-portrait:focus>.hero-portrait-label, .hero-portrait:hover>.hero-portrait-label {
+    top: -8.4px;
+    border-radius: .3rem;
+    background-color: #f0edf2;
+    color: #333;
+}
 .u-relative{
     position: relative;
 }
@@ -816,6 +1014,16 @@ text-align: center;
     box-sizing: border-box;
     vertical-align: baseline;
 }
+.footer .cprt .info ul li {
+    float: left;
+    list-style: none;
+    color: #ccc;
+}
+.footer .cprt .info ul li a {
+    color: #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+}
 .Navbar-modalSection1{
     padding: 20px;
     box-sizing: border-box;
@@ -1002,6 +1210,15 @@ text-align: center;
     position: relative;
     cursor: pointer;
 }
+.btn.m-blue-filled:hover, .btn.m-blue:hover, .button.m-blue-filled:hover, .button.m-blue:hover, button.m-blue-filled:hover, button.m-blue:hover {
+    background-color: #0cbdff;
+}
+.btn.is-active, .btn:hover, .button.is-active, .button:hover, button.is-active, button:hover {
+    border-color: #ffb033;
+    background-color: #ffb033;
+    -webkit-transition: none;
+    transition: none;
+}
 .nav-right{
     float: right;
     font-size: 0;
@@ -1151,7 +1368,7 @@ text-align: center;
     outline: 0;
     border: 3px solid #ff9c00;
     background-color: #ff9c00;
-    color: #333;
+    color: #fff;
     line-height: 1;
     letter-spacing: .025em;
     font-weight: 700;
@@ -1264,6 +1481,9 @@ text-align: center;
     border-color: transparent;
     background-color: #00a5e2;
     color: #fff;
+}
+.btn.m-lg, .btn.m-wide, .button.m-lg, .button.m-wide, button.m-lg, button.m-wide {
+    font-size: 2rem;
 }
 .container .content{
     position: absolute;
@@ -1700,7 +1920,7 @@ p {
 .u-inline-block{
     display: inline-block;
 }
-. u-relative{
+.u-relative{
     position: relative;
 }
 .hero-portrait{
