@@ -314,3 +314,429 @@ svg:not(:root) {
     padding-top: 80px;
     padding-bottom: 80px;
 }
+.game-maps-section{
+    background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/game/bg-maps-section-new.jpg);
+    background-position: top;
+    background-color: #1f2224;
+    left: 0;
+    position: relative;
+    transition: left .25s ease-in-out;
+    background-size: cover;
+}
+body.game .maps-subtitle {
+    padding-bottom: 60px;
+    margin-top: 30px;
+}
+.u-limit-width {
+    max-width: 40em;
+}
+.scm-content-container{
+
+}
+.card>.caption>.heading, .u-invert {
+    color: #f0edf2;
+}
+body.game .map-types {
+    margin-bottom: 24px;
+    background-color: rgba(49,69,80,.65);
+}
+body.game .map-types-flex {
+    display: -webkit-box;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+body.game .map-type-wrapper {
+    max-width: 33.33%;
+    padding: 20px 20px 20px 10px;
+    border-bottom: none;
+    min-width: 325px;
+    width: 50%;
+    cursor: pointer;
+    flex: 1 1 346px;
+    pointer-events: auto;
+    transition: background-color .1s linear;
+}
+.media{
+
+}
+.media-graphic {
+    float: left;
+    margin-right: 16px;
+}
+body.game .map-type-icon {
+    width: 75px;
+    position: relative;
+    fill: #f0edf2;
+    stroke: #f0edf2;
+    stroke-width: 0;
+}
+.map-type-content{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.show-for-lg{
+
+}
+.data-table>thead th, .h5, .intro-text, h5 {
+    font-size: 2.4rem;
+    line-height: normal;
+}
+body.game .map-type-icon-mobile {
+    position: relative;
+    min-width: 0;
+    width: 30px;
+    margin-right: 7px;
+}
+body.game .map-type-name {
+    vertical-align: middle;
+    font-weight: 300;
+}
+body.game .map-type-description {
+    margin-top: 5px;
+    text-align: left;
+}
+body.game .map-type-nav-arrow {
+    background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/game/map-nav-arrows-new.png);
+    background-position-y: -410px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    min-width: 24px;
+    height: 38px;
+}
+.hide-for-lg {
+    display: none!important;
+}
+.hide-for-md {
+    display: none!important;
+}
+.map-type-name span{
+    font-weight: 400;
+    font-size: 2.4rem;
+}body.game .mobile-maps-section {
+     transition: left .25s ease-in-out;
+ }
+.row.spacer-24.column, .row.spacer-24.columns, .row.spacer-24>.column, .row.spacer-24>.columns {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}.row.gutter-24.column, .row.gutter-24.columns, .row.gutter-24>.column, .row.gutter-24>.columns {
+     padding-left: 12px;
+     padding-right: 12px;
+ }
+.lg-4 {
+    width: 33.33333%;
+}
+.maps{
+
+}
+.gutter-24{
+
+}
+.spacer-24{
+
+}
+.xs-12{
+
+}
+.md-6{
+
+}
+.end{
+
+}
+.map-wrapper{
+
+}
+body.game .map.m-16-9 {
+    padding-top: 56.25%;
+}
+body.game .map {
+    background-size: cover;
+    display: block;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.28);
+}
+.mapayutthaya {
+    background-image: url(https://overwatch.nosdn.127.net/1/assets/img/pages/game/CNA33SG70CA61520288193582.jpg);
+}
+.m-16-9{
+
+}
+.mapayutthaya{
+
+}
+body.game .map-gradient {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 40%,rgba(0,0,0,.5));
+}
+body.game .map-name-wrapper {
+    position: absolute;
+    vertical-align: middle;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+    padding-right: 4%;
+    padding-bottom: 2%;
+}body.game .map-flag {
+     height: 17px;
+     margin-right: 5px;
+     display: inline-block;
+     position: relative;
+ }
+
+.map-name{
+    font-style: italic;
+    font-size: 24px;
+    font-family: Big Noodle Too,impact,sans-serif;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+.map-category-container{
+    min-height: 60px;
+}
+.map-category{
+    padding-top: 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+body.game .map-category-icon svg {
+    width: 28.92px;
+}
+.map-category-icon{
+
+}
+.icon {
+    height: 24px;
+    fill: #f0edf2;
+    stroke: #f0edf2;
+    stroke-width: 0;
+}
+body.game .map-category-name {
+    padding-left: 6px;
+    padding-right: 14px;
+    font-size: 13px;
+}
+.game .maps .column{
+    float: left;
+}
+body.game .abilities-section:not(li) {
+    background-size: cover;
+    background-position: center;
+}
+.video-background {
+    position: relative;
+}
+body.game .abilities-section:not(li) .video-background-wrapper {
+    height: 1080px;
+    min-height: 100%;
+}.video-background-wrapper {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+ }
+.video-background-vid.m-right-align {
+    right: 0;
+    left: auto;
+}
+.video-background-wrapper>.video-background-vid {
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+body.game .abilities-section:not(li) .video-background-vid>video {
+    min-height: 100%;
+}
+.video-background-wrapper>.video-background-vid>video {
+    min-width: 100%;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.video-background-vid.m-blend:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 160px;
+    top: -160px;
+    background-image: -webkit-linear-gradient(top,rgba(240,237,242,0) 0,#f0edf2 100%);
+    background-image: linear-gradient(to bottom,rgba(240,237,242,0) 0,#f0edf2 100%);
+}
+body.game .abilities-section:not(li) .video-background-vid.m-blend:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 160px;
+    top: -160px;
+    background-image: -webkit-linear-gradient(top,rgba(6,0,9,0) 0,#060009 100%);
+    background-image: linear-gradient(to bottom,rgba(6,0,9,0) 0,#060009 100%);
+}
+.data-table>thead th, .h5, .intro-text, h5 {
+    font-size: 2.4rem;
+}
+body.game .abilities-section:not(li) .abilities-content {
+    margin-top: 60px;
+}
+.u-limit-width {
+    max-width: 40em;
+}
+body.game .abilities-section:not(li) .abilities-content {
+    margin-top: 60px;
+}
+body.game .match-section:not(li) {
+    background-image: url(../img/bg-howtoplay.jpg);
+    background-size: cover;
+    background-position: center;
+}
+body.game .match-section:not(li) .side-tips-section-content {
+    padding: 1.4em;
+}
+body.game .gray-blue {
+    color: #9daac8;
+}
+.card>.caption>.heading, .u-invert {
+    color: #f0edf2;
+}body.game .match-section:not(li) .side-tips-section {
+     margin-top: 2em;
+     background-color: rgba(40,53,79,.9);
+     text-shadow: none;
+ }
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+    margin-top: .5em;
+}
+.data-table>tbody, .h6, .media-card>.container>.content, .media-thumbnail>.caption, h6 {
+     font-size: 1.8rem;
+ }
+.data-table>tbody, .h6, .media-card>.container>.content, .media-thumbnail>.caption, h6 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: normal;
+    letter-spacing: .5px;
+}
+.game h6{
+    font-size: 1.8rem !important;
+}
+.data-table>thead th, .h5, .intro-text, h5 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: normal;
+}
+.data-table>thead th, .h5, .intro-text, h5 {
+    font-size: 2.4rem;
+}
+body.game .progress-section:not(li) .progress-bg {
+    position: relative;
+    float: none;
+    right: 50%;
+}
+body.game .progress-section:not(li) {
+    overflow: hidden;
+    background-color: #17121d;
+    padding-bottom: 0;
+}
+body.game .progress-section:not(li) .progress-content {
+    margin-top: 20px;
+}
+body.game .progress-section:not(li) .progress-description {
+    max-width: 70em;
+}
+body.game .progress-section:not(li) .loot-description {
+    padding-right: 5em;
+}
+.md-8 {
+    width: 66.66667%;
+}
+body.game .progress-section:not(li) .award-wrap .title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #c68e26;
+}
+body.game .progress-section:not(li) .award-wrap .list {
+    overflow: hidden;
+    height: 80px;
+    border-top: 3px solid #c68e26;
+    background-color: #2f3543;
+}
+body.game .progress-section:not(li) .award-wrap .list ul li {
+    float: left;
+    margin: 0 30px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 80px;
+    font-style: italic;
+}
+body.game .progress-section:not(li) .award-wrap .list ul li span.common {
+    color: #fff;
+}
+body.game .progress-section:not(li) .award-wrap .list ul li span {
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 5px;
+}
+body.game .progress-section:not(li) .award-wrap .list ul li span.rare {
+    color: #00aeff;
+}
+body.game .progress-section:not(li) .award-wrap .list ul li span {
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 5px;
+}
+.md-8 {
+    width: 66.66667%;
+}
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: right;
+}
+.md-4 {
+    width: 33.33333%;
+}body.game .progress-section:not(li) .loot-image>img {
+     height: 200px;
+     position: relative;
+     bottom: 10px;
+     right: 60px;
+ }
+body.game .progress-section:not(li) .achievement-image {
+    margin-top: -4em;
+}
+body.game .progress-section:not(li) .achievement-image>img {
+    height: 400px;
+    left: -100px;
+    position: relative;
+    max-width: none;
+}
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: right;
+}
+body.game .progress-section:not(li) .progress-bg>img {
+    right: -25%;
+    margin-top: -13%;
+    margin-bottom: -6%;
+}
+body.game .progress-section:not(li) .progress-bg>img {
+    position: relative;
+    right: -50%;
+    margin-top: -14%;
+    margin-bottom: -17%;
+}
