@@ -148,7 +148,7 @@
                     </a>
                     <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow">
                         <li>
-                            <a href="#" class="menu-btn m-highlight ">概述</a>
+                            <router-link to="summarize" class="menu-btn m-highlight ">概述</router-link>
                         </li>
                         <li>
                             <a href="#" class="menu-btn m-highlight ">赞赏系统</a>
@@ -1587,12 +1587,6 @@ a {
     line-height: 20px;
     vertical-align: top;
 }
-.footer .info p {
-    font-size: 12px;
-    margin: 0;
-    line-height: 20px;
-    font-weight: 400;
-}
 .ow-footer .cprt .info p {
     line-height: 20px;
     vertical-align: top;
@@ -1616,12 +1610,21 @@ a {
     font-size: 12px;
     line-height: 20px;
 }
-.heroes-section{
+#gotop {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
     text-align: center;
-    background: url(img/candy.jpg) no-repeat top;
-    background-size: cover;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    display: none;
+    cursor: pointer;
 }
 .row{
     float: none;

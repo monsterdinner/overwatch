@@ -1289,7 +1289,7 @@ p a {
     font-size: 12px;
     line-height: 20px;
 }
-.heroes-section{
+.heroes-section:not(li){
     text-align: center;
     background: url(../img/candy.jpg) no-repeat top;
     background-size: cover;

@@ -13,7 +13,11 @@ Vue.component(Button.name,Button)
 import VueResource from 'vue-resource';
 //加载VueResource
 Vue.use(VueResource);
+// 2. 定义路由
+// 每个路由应该映射一个组件。
 
+
+// 3. 创建 router 实例，然后传 `routes` 配置
 //定于全局日期格式过滤器
 //当三方模块moment过滤器日期
 

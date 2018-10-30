@@ -20,7 +20,7 @@ body {
 .game .h2, h2 {
     font-size: 5.8rem;
 }
-.overview-section{
+.overview-section:not(li){
     background-image: url(../img/bg-welcometooverwatch-3.jpg);
     text-align: left;
     background-position: 25% top;
@@ -736,7 +736,107 @@ body.game .progress-section:not(li) .progress-bg>img {
 }
 body.game .progress-section:not(li) .progress-bg>img {
     position: relative;
-    right: -50%;
-    margin-top: -14%;
-    margin-bottom: -17%;
+    right: -25%;
+    max-width: 150%;
+    margin-top: -13%;
+    margin-bottom: -6%;
+}
+.content-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+body.game .progress-section:not(li) .award-wrap {
+    position: relative;
+    margin-top: 20px;
+}
+.u-font-shadow {
+    text-shadow: 1px 2px 3px rgba(51,51,51,.5);
+}
+body.game .progress-section:not(li) .progress-content {
+    margin-top: 20px;
+}
+body.game .progress-section:not(li) .progress-description {
+    max-width: 70em;
+}
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: right;
+}
+body.game .achievement-description{
+    text-align: left;
+    margin-top: 4em;
+    padding-left: 5em;
+}
+.column.row.row, .row.row.columns {
+    float: none;
+}
+.sub-nav {
+    position: relative;
+    z-index: 9;
+}
+.u-pseudo-background:before, body.game .heroes-section:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.sub-nav .sub-nav-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.sub-nav .is-menu-hidden .sub-nav-item {
+    left: 100%;
+    margin-left: -3.6rem;
+}
+.sub-nav .sub-nav-item, .sub-nav .sub-nav-item-small {
+    display: block;
+    position: relative;
+    margin-bottom: .1em;
+    background-color: #3c4860;
+    border-radius: .3rem;
+}
+.sub-nav .sub-nav-btn {
+    color: #333;
+    display: block;
+}
+.sub-nav .sub-nav-icon {
+    display: inline-block;
+    padding: .5rem;
+    height: 100%;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    font-size: 3.6rem;
+    background-color: rgba(0,0,0,.2);
+    background-position: 0 -1em;
+    border-radius: .3rem 0 0 .3rem;
+    background-size: 1em 2em;
+    fill: #f0edf2;
+    opacity: .8;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.sub-nav .sub-nav-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .3em 1.2em;
+    font-family: "Open Sans","microsoft yahei",sans-serif;
+    font-size: 1.09rem;
+    text-transform: none;
+    font-weight: 700;
+    color: #f0edf2;
+    opacity: .5;
+}
+.sub-nav .sub-nav-icon * {
+    fill: #f0edf2;
+}
+.maps-section .map-wrapper{
+    float: left;
 }
