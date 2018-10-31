@@ -113,11 +113,11 @@
         <div class="u-max-width-container">
             <ul class="hero-portrait-group">
                 <li class="u-inline-block u-relative" v-for="(item,index) in hero" @mouseover="heroFor(index)" :key="index">
-                    <a href="" class="hero-portrait"  :class="{ isactive: index==ishas }">
+                    <a href="" class="hero-portrait"  :class="{ isactive: index==ishas }" >
                       <div class="hero-portrait-image-mask">
                         <div class="hero-portrait-image" :style="item.head"></div>
                       </div>
-                        <span class="hero-portrait-label">{{item.name}}</span>
+                        <span class="hero-portrait-label" >{{item.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -129,7 +129,7 @@
      <div class="fg-widowmaker-shoulder-rifle"></div>
      <div class="page-wrapper" style="margin-bottom: 150px;">
          <div class="row">
-             <div class=" lg-6 lg-offset-6 xl-5 xl-offset-6">
+             <div class="lg-6 lg-offset-6 xl-5 xl-offset-6" style="text-align:center">
                  <h2 class="intro-heading-gradient-blue">这个世界需要英雄</h2>
                  <p class="intro-text">现在即是未来，你来吗？</p>
                  <a href="#" class="button m-lg" style="margin-top: 0;">立即购买</a>
@@ -162,7 +162,7 @@
                   {
                  name:"莱因哈特",
                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/reinhardt/icon-portrait.png)",
-                body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/genji.png)",
+                body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/reinhardt.png)",
                  brief:"一名属于过去的勇士，时刻铭记着骑士的信条：无畏、公正、勇敢。"
                  },
                   {
@@ -283,7 +283,7 @@
                  name:"安娜",
                 head:"background-image:url(http://overwatch.nos.netease.com/1/images/heroes/ana/icon-portrait.png)",
                  body:"background-image:url(http://overwatch.nos.netease.com/1/images/v2/home/overlay/ana.png)",
-                 brief:""
+                 brief:"守望先锋的创始成员之一，“起死回生”重返战场保护亲人和朋友。"
                  },
                   {
                  name:"布里吉塔",
@@ -349,5 +349,25 @@
    }
  </script>
 <style>
-
+ .heroes-section:not(li) {
+    text-align: center;
+    background-image: url(../img/candy.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.heroes-section .column {
+    padding-left: 0; 
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nameStyle{
+        top: -8.4px;
+    border-radius: .3rem;
+    background-color: #f0edf2;
+    color: #333;
+}
 </style>

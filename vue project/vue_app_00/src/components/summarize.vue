@@ -380,7 +380,7 @@
         font-weight: 400;
         margin-top: .5em;
     }
-    .column:last-child:not(:first-child){
+    .game .column:last-child:not(:first-child){
         float: right;
         text-align: left;
     }
@@ -934,7 +934,8 @@
     .game h6{
         font-size: 1.8rem !important;
     }
-    .game .h2, h2 {
+    
+    .game h2 {
         font-size: 5.8rem !important;
     }
     .data-table>thead th, .h5, .intro-text, h5 {
@@ -1033,9 +1034,16 @@
     .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
         float: right;
     }
-    .md-4 {
+    .game .md-4 {
         width: 33.33333%;
-    }.game .progress-section:not(li) .loot-image>img {
+    }
+    .game h5{
+        font-size: 2.4rem;
+    }
+    .progress-content h5{
+        text-align: left;
+    }
+    .game .progress-section:not(li) .loot-image>img {
          height: 200px;
          position: relative;
          bottom: 10px;

@@ -139,73 +139,22 @@
 <div class="navbar1" id="navbar1" :style="Snavbar">
         <nav class="navbar1-main" :style="Snavbarmain">
             <div class="nav-left">
-                <a href="#" class="nav-logo"></a>
+                <router-link to="home" class="nav-logo"></router-link>
             </div>
             <ul class="nav-menu">
-                <li>
-                    <a href="#" class="nav-btn" :class="{ 'mm-has-children':hasError ,'m-has-children': isActive }" @click="showToggle">
-                        游戏
-                    </a>
-                    <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow">
-                        <li>
-                            <router-link to="summarize" class="menu-btn m-highlight ">概述</router-link>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">赞赏系统</a>
-                        </li>
-                    </ul>
-                </li>
+                <app-header :title="game" :navfor="gaishu"></app-header>
                 <li>
                     <a href="#" class="nav-btn">
                         英雄
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-btn " :class="{ 'mm-has-children':hasError1 , 'm-has-children': isActive1 }" @click="showToggle1">
-                        活动
-                    </a>
-                    <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow1">
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">夏季运动会</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">行动档案</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">欢度新春</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">雪国仙境</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">万圣夜惊魂</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">周年庆典</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">国王行动</a>
-                        </li>
-                    </ul>
-                </li>
+                </li>  
+                 <app-header :title="huodong" :navfor="active"></app-header> 
                 <li>
                     <a href="#" class="nav-btn">
                         视频图片
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-btn" :class="{ 'mm-has-children':hasError2 , 'm-has-children': isActive2 }" @click="showToggle2">
-                        新闻
-                    </a>
-                    <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow2">
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">新闻</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">补丁</a>
-                        </li>
-                    </ul>
-                </li>
+                <app-header :title="news" :navfor="xingwen"></app-header> 
                 <li>
                     <a href="#" class="nav-btn">
                         下载
@@ -221,19 +170,7 @@
                         电子竞技
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-btn " :class="{ 'mm-has-children':hasError3 , 'm-has-children': isActive3 }" @click="showToggle3">
-                        社区
-                    </a>
-                    <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow3">
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">我们身边的英雄</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-btn m-highlight ">论坛</a>
-                        </li>
-                    </ul>
-                </li>
+                 <app-header :title="shequ" :navfor="shequ1"></app-header> 
             </ul>
             <div class="nav-right">
                 <a href="#" class="nav-btn m-orange">购买</a>
@@ -299,28 +236,80 @@
     </div>
 </template>
 <script type="text/ecmascript-6">
+import header from './components/header'
  export default{
         data(){
-
             return{
-                isActive:true,
-                  hasError: false,
-                   isActive1:true,
-                 hasError1: false,
-                 isActive2:true,
-                  hasError2: false,
-                  isActive3:true,
-                  hasError3: false,
-                   fal:false,
+                 game:"游戏",
+                 fal:false,
                   fal1:false,
                  fal2:false,
                   fal3:false,
                  Snavbar:{},
                  Snavbarmain:{},
-                 isSubShow:false,
-                 isSubShow1:false,
-                 isSubShow2:false,
-                 isSubShow3:false
+                 gaishu:[
+                     {
+                         word:"概述",
+                         site:"summarize"
+                     },
+                      {
+                         word:"赞赏系统",
+                         site:"summarize"
+                     }
+                 ],
+                 huodong:"活动",
+                 active:[
+                      {
+                         word:"夏季运动会",
+                         site:"summarize"
+                     },
+                      {
+                         word:"行动档案",
+                         site:"summarize"
+                     },
+                      {
+                         word:"欢度新春",
+                         site:"summarize"
+                     },
+                      {
+                         word:"雪国仙境",
+                         site:"summarize"
+                     },
+                      {
+                         word:"万圣夜惊魂",
+                         site:"summarize"
+                     },
+                      {
+                         word:"周年庆典",
+                         site:"summarize"
+                     },
+                      {
+                         word:"国王大道",
+                         site:"summarize"
+                     }
+                 ],
+                 news:"新闻",
+                 xingwen:[
+                      {
+                         word:"新闻",
+                         site:"summarize"
+                     },
+                      {
+                         word:"补丁",
+                         site:"summarize"
+                     }
+                 ],
+                shequ:"社区",
+                shequ1:[
+                    {
+                         word:"我身边的英雄",
+                         site:"summarize"
+                     },
+                      {
+                         word:"论坛",
+                         site:"summarize"
+                     }
+                ]
             };
         },
         methods:{
@@ -336,66 +325,22 @@
                            this.Snavbarmain={marginTop:"20px", marginLeft: "20px", marginRight: "20px"}
            }
          },
-          showToggle(){
-                     if(this.isSubShow==false){
-
-                     this.isSubShow=true;
-                      this.isActive=false;
-                      this.hasError=true
-                     }
-                     else if(this.isSubShow==true){
-
-                     this.isSubShow=false;
-                    this.isActive=true;
-                    this.hasError=false
-                     }
+              shownav(){
+             if(this.fal==false){
+             this.fal=true;
+             this.fal1=false;
+             this.fal2=false;
+             this.fal3=true;
+             }else if(this.fal==true){
+             this.fal=false;
+             this.fal3=false;
+             }
              },
-           showToggle1(){
-                                  if(this.isSubShow1==false){
-
-                                  this.isSubShow1=true;
-                                  this.isActive1=false;
-                                  this.hasError1=true
-                                  }
-                                  else if(this.isSubShow1==true){
-
-                                  this.isSubShow1=false;
-                                  this.isActive1=true;
-                                  this.hasError1=false}
-                          },
-           showToggle2(){
-                                            if(this.isSubShow2==false){
-
-                                            this.isSubShow2=true;
-                                             this.isActive2=false;
-                                                                              this.hasError2=true}
-                                            else if(this.isSubShow2==true){
-                                            this.isSubShow2=false;
-                                            this.isActive2=true;
-                                                                this.hasError2=false}
-                                    },
-           showToggle3(){
-                                            if(this.isSubShow3==false){
-                                            this.isSubShow3=true;
-                                             this.isActive3=false;
-                                             this.hasError3=true}
-                                            else if(this.isSubShow3==true){
-                                            this.isSubShow3=false;
-                                            this.isActive3=true;
-                                            this.hasError3=false}
-                                    },
-                                     shownav(){
-               if(this.fal==false){
-               this.fal=true;
-               this.fal3=true;
-               }else if(this.fal==true){
-               this.fal=false;
-               this.fal3=false;
-              }
-               },
-               shownav1(){
+         shownav1(){
              if(this.fal1==false){
              this.fal1=true;
+             this.fal=false;
+             this.fal2=false;
              this.fal3=true;
              }else if(this.fal1==true){
              this.fal1=false;
@@ -405,6 +350,8 @@
              shownav2(){
                if(this.fal2==false){
                this.fal2=true;
+               this.fal=false;
+               this.fal1=false;
                this.fal3=true;
                }else if(this.fal2==true){
               this.fal2=false;
@@ -418,9 +365,7 @@
                   this.fal2=false;
                   this.fal=false;
                }
-               },
-              
-
+               }
         },
         created(){
 
@@ -429,10 +374,11 @@
             window.addEventListener('scroll', this.handleScroll)
           },
         components:{
-
+               "app-header":header
         },
         destroyed () {
           window.removeEventListener('scroll', this.handleScroll)
+           showToggle()
         }
    }
  </script>
