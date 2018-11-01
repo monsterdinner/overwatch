@@ -1,6 +1,6 @@
 <template>
-    <li>
-       <a href="#" class="nav-btn" :class="{ 'mm-has-children':hasError ,'m-has-children': isActive }" @mouseover="showToggle">
+    <li @mouseover="showToggle" @mouseout="showout" >
+       <a href="#" class="nav-btn" :class="{ 'mm-has-children':hasError ,'m-has-children': isActive }" >
            {{title}}
        </a>
        <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow">
@@ -32,6 +32,12 @@
                     this.isActive=true;
                     this.hasError=false
                      }
+             },
+             showout(){
+          
+                    this.isSubShow=false;
+                    this.isActive=true;
+                    this.hasError=false
              }
         },
         created() {

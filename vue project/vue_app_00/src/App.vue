@@ -998,11 +998,15 @@ text-align: center;
 .nav-sub-menu li{
     height: 100%;
     position: relative;
-    display: block;
+    display: block ;
+}
+.nav-sub-menu li:hover{
+    background: rgba(40,53,79,.9);
+    color: #fff;
 }
 .menu-btn{
     width: 100%;
-    text-align: left;
+    text-align: left !;
     font-weight: 100;
     font-size: 14px;
     padding: 15px 0;
@@ -1014,6 +1018,9 @@ text-align: center;
     letter-spacing: .05em;
     position: relative;
     cursor: pointer;
+}
+.menu-btn:hover{
+    color: #fff;
 }
 .btn.m-blue-filled:hover, .btn.m-blue:hover, .button.m-blue-filled:hover, .button.m-blue:hover, button.m-blue-filled:hover, button.m-blue:hover {
     background-color: #0cbdff;

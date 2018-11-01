@@ -2,7 +2,7 @@
 <div class="app_index">
  <section class="home-header">
      <div class="home-header__video-bg">
-         <video   muted="muted">
+         <video  autoplay muted="muted">
              <source src="http://127.0.0.1:3001/img/video/1.mp4" type="video/mp4">
          </video>
      </div>
