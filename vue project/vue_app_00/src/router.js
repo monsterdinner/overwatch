@@ -11,10 +11,29 @@ import Summarize from './components/summarize.vue';
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",
   routes: [
-    {path:'/',redirect:"/home"},
-    {path:'/home',component:Index},
-    {path:'/summarize',component:Summarize}
-
-  ],linkActiveClass:"mui-active"
+    {
+      path:'/',
+    redirect:"/home",
+    name: 'Home',
+    meta:{index:0},
+  },
+    {
+      path:'/home',
+    component:Index,
+    name: 'Home',
+      meta:{index:0},
+  },
+    {
+      path:'/summarize',
+    component:Summarize,
+    name: 'Summarize',
+      meta:{index:1},
+  }
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
+  linkActiveClass:"mui-active"
 })

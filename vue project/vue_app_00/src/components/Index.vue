@@ -1,8 +1,9 @@
 <template>
 <div class="app_index">
+    <app-headers></app-headers>
  <section class="home-header">
      <div class="home-header__video-bg">
-         <video  autoplay muted="muted">
+         <video   loop muted="muted">
              <source src="http://127.0.0.1:3001/img/video/1.mp4" type="video/mp4">
          </video>
      </div>
@@ -137,10 +138,12 @@
          </div>
      </div>
  </section>
-
+<app-footer></app-footer>
 </div>
 </template>
 <script type="text/ecmascript-6">
+import footer from './footer'
+import headers from './headers'
  export default{
 
         data(){
@@ -344,7 +347,8 @@
 
         },
         components:{
-
+           'app-footer':footer,
+           'app-headers':headers
         }
    }
  </script>

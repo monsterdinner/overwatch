@@ -1,5 +1,6 @@
 <template>
 <div class="app_summarize game"  id="top">
+    <app-headers></app-headers> 
     <section id="overview-section" class="overview-section  u-font-shadow">
         <div class="page-wrapper">
             <div class="row intro-row">
@@ -98,7 +99,7 @@
     </div>
      <div class="map-types u-invert">
         <div class="u-max-width-container map-types-flex">
-            <div data-js="maptype" data-id="assault" data-name="Assault" class="map-type-wrapper flex-item">
+            <div data-js="maptype" data-id="assault" data-name="Assault" class="map-type-wrapper flex-item" @click="attack">
                 <div class="media">
                     <svg viewBox="0 0 123.3 102.3" class="media-graphic map-type-icon show-for-lg">
 
@@ -326,7 +327,7 @@
         </div>
     </div>
      <div class="maps mobile-maps-section u-invert row u-max-width-container gutter-24 spacer-24">
-        <div data-js="map" data-id="ayutthaya" data-name="Ayutthaya" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="ayutthaya" data-name="Ayutthaya" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapayutthaya">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="https://overwatch.nosdn.127.net/1/assets/img/pages/game/VAOF4LMIRXP81520288253914.jpg" class="map-flag">
@@ -341,7 +342,7 @@
                 </svg></span><span class="h6 map-category-name">勇夺锦旗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="blackForest" data-name="Black Forest" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="blackForest" data-name="Black Forest" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapblackForest">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/V845K8JV203J1485822753786.jpg" class="map-flag">
@@ -362,7 +363,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="blizzardworld" data-name="Blizzard World" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="blizzardworld" data-name="Blizzard World" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapblizzardworld">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow">
@@ -386,7 +387,7 @@
                 </svg></span><span class="h6 map-category-name">攻击/护送</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="busan" data-name="Busan" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="busan" data-name="Busan" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapbusan">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow">
@@ -403,7 +404,7 @@
                 </svg></span><span class="h6 map-category-name">占领要点</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="castillo" data-name="Castillo" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="castillo" data-name="Castillo" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapcastillo">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/CCKOMHG7C6Z41485822754224.jpg" class="map-flag">
@@ -424,7 +425,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="chateauGuillard" data-name="Château Guillard" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="chateauGuillard" data-name="Château Guillard" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapchateauGuillard">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/Z9KQLDUE1JO41503000600421.jpg" class="map-flag">
@@ -443,7 +444,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="dorado" data-name="Dorado" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="dorado" data-name="Dorado" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapdorado">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/CCKOMHG7C6Z41485822754224.jpg" class="map-flag">
@@ -473,7 +474,7 @@
                 </svg></span><span class="h6 map-category-name">死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="echopointAntarctica" data-name="Ecopoint: Antarctica" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="echopointAntarctica" data-name="Ecopoint: Antarctica" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapechopointAntarctica">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/EQ29NPYEXLDQ1485822754226.jpg" class="map-flag">
@@ -494,7 +495,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="eichenwalde" data-name="Eichenwalde" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="eichenwalde" data-name="Eichenwalde" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapeichenwalde">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/V845K8JV203J1485822753786.jpg" class="map-flag">
@@ -526,7 +527,7 @@
                 </svg></span><span class="h6 map-category-name">死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="hanamura" data-name="Hanamura" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa,att:gongji}" data-id="hanamura" data-name="Hanamura" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maphanamura">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/KSZ28DL90HUS1485822754254.jpg" class="map-flag">
@@ -544,7 +545,7 @@
                 </svg></span><span class="h6 map-category-name">攻防作战</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="hollywood" data-name="Hollywood" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="hollywood" data-name="Hollywood" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maphollywood">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/HEQ2ZVJ4G6LA1485822754165.jpg" class="map-flag">
@@ -576,7 +577,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="horizonLunarColony" data-name="Horizon Lunar Colony" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa,att:gongji}" data-id="horizonLunarColony" data-name="Horizon Lunar Colony" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maphorizonLunarColony">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/EQ29NPYEXLDQ1485822754226.jpg" class="map-flag">
@@ -594,7 +595,7 @@
                 </svg></span><span class="h6 map-category-name">攻防作战</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="ilios" data-name="Ilios" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="ilios" data-name="Ilios" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapilios">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/HLM6WAZIKGJD1485822754142.jpg" class="map-flag">
@@ -615,7 +616,7 @@
                 </svg></span><span class="h6 map-category-name">勇夺锦旗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="Junkertown" data-name="Junkertown" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="Junkertown" data-name="Junkertown" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapJunkertown">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/NRVOJH6NXLPC1504724220110.jpg" class="map-flag">
@@ -635,7 +636,7 @@
                 </svg></span><span class="h6 map-category-name">运载目标</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="kingsRow" data-name="King's Row" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="kingsRow" data-name="King's Row" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapkingsRow">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/QSUIFBE8AUVF1485822753785.jpg" class="map-flag">
@@ -667,7 +668,7 @@
                 </svg></span><span class="h6 map-category-name">死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="lijiangTower" data-name="Lijiang Tower" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="lijiangTower" data-name="Lijiang Tower" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maplijiangTower">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/2W0K1IT1EUIP1485822754150.jpg" class="map-flag">
@@ -688,7 +689,7 @@
                 </svg></span><span class="h6 map-category-name">勇夺锦旗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="necropolis" data-name="Necropolis" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="necropolis" data-name="Necropolis" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapnecropolis">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/LHXOBVHDOPBB1485822754263.jpg" class="map-flag">
@@ -709,7 +710,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="nepal" data-name="Nepal" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="nepal" data-name="Nepal" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapnepal">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/CO2EHEFHGU981485822753898.png" class="map-flag">
@@ -730,7 +731,7 @@
                 </svg></span><span class="h6 map-category-name">勇夺锦旗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="numbani" data-name="Numbani" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="numbani" data-name="Numbani" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapnumbani">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/R0WQVPGOD6C71485822753785.jpg" class="map-flag">
@@ -752,7 +753,7 @@
                 </svg></span><span class="h6 map-category-name">攻击/护送</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="oasis" data-name="Oasis" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="oasis" data-name="Oasis" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapoasis">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/CBBLGI07ZLQ91485890066552.jpg" class="map-flag">
@@ -773,7 +774,7 @@
                 </svg></span><span class="h6 map-category-name">勇夺锦旗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="petra" data-name="Petra" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="petra" data-name="Petra" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mappetra">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nosdn.127.net/1/assets/img/pages/game/292GWF951RSS1527642184905.jpg" class="map-flag">
@@ -792,7 +793,7 @@
                 </svg></span><span class="h6 map-category-name">团队死斗</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="rialto" data-name="Rialto" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="rialto" data-name="Rialto" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maprialto">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="https://overwatch.nosdn.127.net/1/assets/img/pages/game/rialto-italy.jpg" class="map-flag">
@@ -812,7 +813,7 @@
                 </svg></span><span class="h6 map-category-name">运载目标</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="route66" data-name="Route 66" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="route66" data-name="Route 66" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maproute66">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/HEQ2ZVJ4G6LA1485822754165.jpg" class="map-flag">
@@ -832,7 +833,7 @@
                 </svg></span><span class="h6 map-category-name">运载目标</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="templeOfAnubis" data-name="Temple of Anubis" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa,att:gongji}" data-id="templeOfAnubis" data-name="Temple of Anubis" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 maptempleOfAnubis">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/LHXOBVHDOPBB1485822754263.jpg" class="map-flag">
@@ -850,7 +851,7 @@
                 </svg></span><span class="h6 map-category-name">攻防作战</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="volskayaIndustries" data-name="Volskaya Industries" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa,att:gongji}" data-id="volskayaIndustries" data-name="Volskaya Industries" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapvolskayaIndustries">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/IXDF3VHB9H781485822754226.jpg" class="map-flag">
@@ -868,7 +869,7 @@
                 </svg></span><span class="h6 map-category-name">攻防作战</span></div>
             </div>
         </div>
-        <div data-js="map" data-id="watchpointGibraltar" data-name="Watchpoint: Gibraltar" class="column xs-12 md-6 lg-4 end map-wrapper">
+        <div :class="{map:mapfa}" data-id="watchpointGibraltar" data-name="Watchpoint: Gibraltar" class="column xs-12 md-6 lg-4 end map-wrapper">
             <div class="map m-16-9 mapwatchpointGibraltar">
                 <div class="map-gradient"></div>
                 <div class="map-name-wrapper u-font-shadow"><img src="http://overwatch.nos.netease.com/1/assets/img/pages/game/EQ29NPYEXLDQ1485822754226.jpg" class="map-flag">
@@ -980,114 +981,167 @@
                 <p class="u-invert u-align-center">游戏内补给开出物品的公示，由于数量关系，仅显示部分结果。</p>
             </div>
             <div class="list">
-                <ul style="width: 19360px;"><li>你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li>魑**魉 获得：<span class="rare">魅影战甲</span><span class="common">注射器</span><span class="common">蜘蛛</span><span class="common">图标</span></li><li>消**群 获得：<span class="common">我又来捣蛋了</span><span class="common">不给糖果就捣蛋</span><span class="rare">咖啡店</span><span class="epic">150货币</span></li><li>朽** 获得：<span class="rare">沼泽巨兽</span><span class="legendary">化身</span><span class="common">我在雷达上看到你了</span><span class="common">吃撑</span></li><li>星**露 获得：<span class="common">Oooooooooooo...</span><span class="common">俯视</span><span class="common">钥匙</span><span class="rare">能量</span></li><li>悲**笔 获得：<span class="common">过马路时请当心</span><span class="rare">风</span><span class="common">苦修</span><span class="common">努力工作，没有捷径可走</span></li><li>奔**泰 获得：<span class="rare">邪神信徒</span><span class="common">我是瑞典人</span><span class="rare">奥丽莎</span><span class="common">胡须</span></li><li>哎**哟 获得：<span class="common">我这儿有个东西</span><span class="rare">节奏</span><span class="common">我只能杀个不停</span><span class="common">击掌</span></li><li>中**菜 获得：<span class="rare">八零年代</span><span class="rare">舒坦</span><span class="common">不给糖果就捣蛋</span><span class="common">就这点本事</span></li><li>T**i 获得：<span class="epic">死灵哈特</span><span class="epic">150货币</span><span class="common">紧张情绪已缓解</span><span class="rare">南瓜</span></li><li>A**k 获得：<span class="common">不给糖果就捣蛋</span><span class="rare">猫咪</span><span class="common">不给糖果就捣蛋</span><span class="epic">唾弃</span></li><li>A**a 获得：<span class="common">你已经死了</span><span class="common">图标</span><span class="rare">蓝莓</span><span class="epic">美丽吓人</span></li><li>鲜**放 获得：<span class="epic">墓石堡垒</span><span class="rare">50货币</span><span class="common">万圣节快乐</span><span class="common">打扮好了，开始杀人</span></li><li>雪**月 获得：<span class="common">不给糖果就捣蛋</span><span class="common">不要忘记那些死去的人们</span><span class="rare">南瓜</span><span class="common">暗影守望</span></li><li>雨** 获得：<span class="epic">地动山摇</span><span class="epic">傲慢</span><span class="common">尼罗角蝰</span><span class="rare">腥红</span></li><li>荷** 获得：<span class="rare">煞面魔</span><span class="common">你说完了吗</span><span class="common">艾米丽</span><span class="legendary">混乱球</span></li><li>执**辑 获得：<span class="epic">恶灵魔鹰</span><span class="rare">战地指挥官</span><span class="common">让我看看这里有什么</span><span class="common">真是不堪入目</span></li><li>女**友 获得：<span class="epic">砸南瓜</span><span class="common">南瓜</span><span class="common">不给糖果就捣蛋</span><span class="common">不给糖果就捣蛋</span></li><li>天**酥 获得：<span class="common">魅影战甲</span><span class="rare">握拳</span><span class="epic">150货币</span><span class="common">猪猪软糖</span></li><li>周**丶 获得：<span class="rare">南瓜球</span><span class="common">打鼓</span><span class="rare">风</span><span class="common">挑战</span></li><li>你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li>魑**魉 获得：<span class="rare">魅影战甲</span><span class="common">注射器</span><span class="common">蜘蛛</span><span class="common">图标</span></li><li>消**群 获得：<span class="common">我又来捣蛋了</span><span class="common">不给糖果就捣蛋</span><span class="rare">咖啡店</span><span class="epic">150货币</span></li><li>朽** 获得：<span class="rare">沼泽巨兽</span><span class="legendary">化身</span><span class="common">我在雷达上看到你了</span><span class="common">吃撑</span></li><li>星**露 获得：<span class="common">Oooooooooooo...</span><span class="common">俯视</span><span class="common">钥匙</span><span class="rare">能量</span></li><li>悲**笔 获得：<span class="common">过马路时请当心</span><span class="rare">风</span><span class="common">苦修</span><span class="common">努力工作，没有捷径可走</span></li><li>奔**泰 获得：<span class="rare">邪神信徒</span><span class="common">我是瑞典人</span><span class="rare">奥丽莎</span><span class="common">胡须</span></li><li>哎**哟 获得：<span class="common">我这儿有个东西</span><span class="rare">节奏</span><span class="common">我只能杀个不停</span><span class="common">击掌</span></li><li>中**菜 获得：<span class="rare">八零年代</span><span class="rare">舒坦</span><span class="common">不给糖果就捣蛋</span><span class="common">就这点本事</span></li><li>T**i 获得：<span class="epic">死灵哈特</span><span class="epic">150货币</span><span class="common">紧张情绪已缓解</span><span class="rare">南瓜</span></li><li>A**k 获得：<span class="common">不给糖果就捣蛋</span><span class="rare">猫咪</span><span class="common">不给糖果就捣蛋</span><span class="epic">唾弃</span></li><li>A**a 获得：<span class="common">你已经死了</span><span class="common">图标</span><span class="rare">蓝莓</span><span class="epic">美丽吓人</span></li><li>鲜**放 获得：<span class="epic">墓石堡垒</span><span class="rare">50货币</span><span class="common">万圣节快乐</span><span class="common">打扮好了，开始杀人</span></li><li>雪**月 获得：<span class="common">不给糖果就捣蛋</span><span class="common">不要忘记那些死去的人们</span><span class="rare">南瓜</span><span class="common">暗影守望</span></li><li>雨** 获得：<span class="epic">地动山摇</span><span class="epic">傲慢</span><span class="common">尼罗角蝰</span><span class="rare">腥红</span></li><li>荷** 获得：<span class="rare">煞面魔</span><span class="common">你说完了吗</span><span class="common">艾米丽</span><span class="legendary">混乱球</span></li><li>执**辑 获得：<span class="epic">恶灵魔鹰</span><span class="rare">战地指挥官</span><span class="common">让我看看这里有什么</span><span class="common">真是不堪入目</span></li><li>女**友 获得：<span class="epic">砸南瓜</span><span class="common">南瓜</span><span class="common">不给糖果就捣蛋</span><span class="common">不给糖果就捣蛋</span></li><li>天**酥 获得：<span class="common">魅影战甲</span><span class="rare">握拳</span><span class="epic">150货币</span><span class="common">猪猪软糖</span></li><li>周**丶 获得：<span class="rare">南瓜球</span><span class="common">打鼓</span><span class="rare">风</span><span class="common">挑战</span></li></ul>
+                <ul style="width: 19360px;">
+                    <li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li><li :style="{left:weiyi+'px'}">你**妹 获得：<span class="common">不给糖果就捣蛋</span><span class="common">我会碾碎你</span><span class="rare">舞姿</span><span class="common">签名</span></li></ul>
             </div>
         </div>
     </section>
     <nav class="show-for-md sub-nav">
         <ul class="sub-nav-menu is-menu-hidden" id="sub-nav-menu">
-            <li class="sub-nav-item overview-section">
-                <a class="sub-nav-btn active" href="#overview-section" id="overview" rel="#overview">
+              <li class="sub-nav-item" :class="{bg:isbg==index,navl:wei==index+1}" @mouseover="side(index)" @mouseout="sideout(index)" @click="sideon(index)"  v-for="(item,index) in navall" :key="index">
+                <a class="sub-nav-btn active" :href="item.sid" >
                     <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <path d="M7.5,2.6c0,0-0.6,0-1.2,0.1L5,3.9v24.3l1.2,1.2h1.3l21.8-12.8v-1.3L7.5,2.6z"></path>
-                    </svg><span class="sub-nav-text">守望先锋</span></a>
+                         <path v-for="(itema,indexa) in item.sitem" :key="indexa" :d="itema"></path>
+                    </svg><span class="sub-nav-text">
+                        {{item.sname}}
+                        </span></a>
             </li>
-            <li class="sub-nav-item heroes-section">
-                <a class="sub-nav-btn active" href="#heroes-section" id="heroes" rel="#heroes">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <path d="M24.6,24.2c-1-2.8-2.7-3.1-5.2-4.1c-0.3-0.1-0.6-0.3-0.8-0.5c-0.5,0-0.8-0.4-1-0.7c-0.9-1.1-1.5-1.4-2.2-2.6
-                c-0.5-1-0.4-1.8,0.3-2.6c3-3.2,2-2.4,1.7-6.1c0-0.1,0-0.1,0-0.2l-0.6-2.1c-0.6-1.3-1.9-2.2-3.6-2.3C9.9,2.6,8.4,4,7.9,5.6
-                c0,0.1-0.1,0.2-0.1,0.3c-0.6,3-1,5.2,1.4,7.8c0.4,0.5,0.8,1,0.6,1.6c-0.7,2-1.9,2.9-3.4,4.6c-0.1-0.1-0.1-0.1-0.2-0.2
-                C6.1,19.8,6,19.9,5.8,20c-0.5,0.3-1.2,0.3-1.8,0.4c-0.4,0.1-0.8,0.3-1.1,0.5c-0.5,0.5-1,1-1.5,1.6C1.2,23,1,23.5,0.8,24l12,6.9h0.3
-                h0.4l11.2-6.5C24.7,24.4,24.6,24.3,24.6,24.2z"></path>
-                        <path d="M19,13.7c0,0-1.8,1.5-0.3,2.5l1.4,1.4l3,1.4l1.5,0.8l1,0.8l0.9,1.1l0.9,1.6l3.9-2.6c0-0.1,0-0.2-0.1-0.2
-                c-0.8-2.4-2.4-2.7-4.5-3.6c-0.3-0.1-0.5-0.3-0.7-0.5c-0.4,0-0.7-0.3-0.9-0.6c-0.7-1-1.3-1.2-1.9-2.3c-0.4-0.8-0.4-1.6,0.3-2.3
-                c1.4-1.5,1.6-3.4,1.4-5.3c0-0.1,0-0.1,0-0.2l-0.5-1.9c-0.6-1.2-1.7-1.9-3.1-2c-1.6-0.1-2.1,0.1-2.9,0.6c0.8,1,1.8,2.7,1.8,5.2
-                C20.2,7.6,20.7,10.5,19,13.7z"></path>
-                    </svg><span class="sub-nav-text">英雄</span></a>
-            </li>
-            <li class="sub-nav-item role-section">
-                <a class="sub-nav-btn active" href="#role-section" id="role" rel="#role">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <path d="M25.9,1c0,0-4.2,1.1-9.9,1.1S6.1,1,6.1,1C3.4,0.6,3.2,3.8,3.2,3.8v10.4c0,3,0.5,3.7,0.5,3.7c1.4,2.8,4.4,6.2,4.4,6.2
-                c6.5,7.5,8,7,8,7s1.4,0.5,8-7c0,0,3-3.4,4.4-6.2c0,0,0.5-0.7,0.5-3.7V3.8C28.9,3.8,28.6,0.6,25.9,1z M22.1,15.6
-                c0,0.4-0.3,0.8-0.8,0.8h-3.1v3.1c0,0.4-0.3,0.8-0.8,0.8h-2.8c-0.4,0-0.8-0.3-0.8-0.8v-3.1h-3.1c-0.4,0-0.8-0.3-0.8-0.8v-2.8
-                c0-0.4,0.3-0.8,0.8-0.8h3.1V8.9c0-0.4,0.3-0.8,0.8-0.8h2.8c0.4,0,0.8,0.3,0.8,0.8V12h3.1c0.4,0,0.8,0.3,0.8,0.8V15.6z"></path>
-                    </svg><span class="sub-nav-text">角色</span></a>
-            </li>
-            <li class="sub-nav-item maps-section">
-                <a class="sub-nav-btn active" href="#maps-section" id="maps" rel="#maps">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <circle r="3.9" cy="13.5" cx="16.2"></circle>
-                        <g>
-                            <path d="M16.1,1.8C9.7,1.8,4.4,7.1,4.4,13.5c0,6.4,5.2,11.7,11.7,11.7S27.8,20,27.8,13.5C27.8,7.1,22.6,1.8,16.1,1.8z M16.1,21.6
-                    C11.6,21.6,8,18,8,13.5s3.6-8.1,8.1-8.1s8.1,3.6,8.1,8.1S20.6,21.6,16.1,21.6z"></path>
-                            <path d="M16.6,31.3l0.1-0.2l3.1-7.9l0.2-0.5c0-0.1,0-0.1,0-0.2c0-0.5-0.3-0.9-0.6-0.9h-6.6c-0.4,0-0.6,0.4-0.6,0.9
-                    c0,0.1,0,0.2,0,0.3l0.1,0.2l3.2,8l0.1,0.2c0.1,0.2,0.3,0.4,0.5,0.4C16.3,31.7,16.5,31.5,16.6,31.3z"></path>
-                        </g>
-                    </svg><span class="sub-nav-text">地图</span></a>
-            </li>
-            <li class="sub-nav-item abilities-section">
-                <a class="sub-nav-btn active" href="#abilities-section" id="abilities" rel="#abilities">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <path d="M15.24,18.36l-6.56-5.49c0,0-0.2-0.22,0.03-0.41L25.12,1.85c0,0,0.31-0.09,0.37,0.09c0,0,0.14,0.22-0.02,0.39l-9.69,9.93
-    l6.79,6.02c0,0,0.22,0.15,0.05,0.41L6.85,30.15c0,0-0.15,0.12-0.37-0.05c0,0-0.14-0.2,0-0.43L15.24,18.36z"></path>
-                    </svg><span class="sub-nav-text">基础知识</span></a>
-            </li>
-            <li class="sub-nav-item match-section">
-                <a class="sub-nav-btn active" href="#match-section" id="match" rel="#match">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <g>
-                            <path d="M17.9,9.6l-5.6,14.8H9.3L3.7,9.6H7l3.9,10.5l4-10.5H17.9z"></path>
-                        </g>
-                        <g>
-                            <path d="M27.3,11.1L25,13.5c-0.7-0.9-1.5-1.3-2.5-1.3c-0.6,0-1,0.2-1.4,0.5c-0.4,0.3-0.6,0.7-0.6,1.2c0,0.5,0.2,0.9,0.6,1.2
-                    c0.4,0.3,1.2,0.6,2.3,1c1.2,0.4,2.1,0.8,2.6,1.2c1.1,0.8,1.6,1.9,1.6,3.1c0,1.4-0.6,2.5-1.7,3.4c-1,0.8-2.5,1.3-4.4,1.3
-                    c-2,0-3.7-0.6-5.2-1.8l2.2-2.3c1.1,0.9,2.1,1.4,3.1,1.4c0.7,0,1.2-0.2,1.6-0.6c0.3-0.3,0.4-0.7,0.4-1.1c0-0.7-0.5-1.3-1.4-1.7
-                    c-0.3-0.2-1.2-0.5-2.5-1c-2.1-0.8-3.1-2.1-3.1-3.9c0-1.5,0.6-2.6,1.9-3.6c1-0.7,2.2-1.1,3.7-1.1c0.9,0,1.8,0.1,2.5,0.4
-                    C25.8,10,26.5,10.5,27.3,11.1z"></path>
-                        </g>
-                    </svg><span class="sub-nav-text">比赛</span></a>
-            </li>
-            <li class="sub-nav-item progress-section">
-                <a class="sub-nav-btn active" href="#progress-section" id="progress" rel="#progress">
-                    <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
-                        <path d="M16.1,5.1h-4.6c0,0-2.1,0.1-2.1,2.1c0,0-0.9,9.2,5.4,13.4v2.4c0,0-4.4,1-4.4,3.9H16
-                C16,26.8,16.1,5,16.1,5.1z"></path>
-                        <path d="M10,9.5H5.6c0,0-1.5,0-1.5,2.5c0,0-0.1,6.3,9.5,7.3l-1-2.2c0,0-6.6-0.9-6.3-5.8H11L10,9.5z"></path>
-                        <path d="M16,5.1h4.6c0,0,2.1,0.1,2.1,2.1c0,0,0.9,9.2-5.4,13.4v2.4c0,0,4.4,1,4.4,3.9H16C16,26.8,16,5,16,5.1z"></path>
-                        <path d="M22.1,9.5h4.4c0,0,1.5,0,1.5,2.5c0,0,0.1,6.3-9.6,7.3l1-2.2c0,0,6.6-0.9,6.3-5.8h-4.7L22.1,9.5z"></path>
-                    </svg><span class="sub-nav-text">奖励</span></a>
-            </li>
-
         </ul>
     </nav>
-    <a href="#top"  id="gotop"  style="display: inline;">top</a>
+     <a href="#top"  id="gotop" @click="toTop" style="display: inline;"  v-show="ttt" class="top">top</a>
+      <app-footer></app-footer> 
 </div>
 </template>
-<script type="text/ecmascript-6">
+<script>
+import footer from './footer'
+import headers from './headers'
  export default{
-
         data(){
             return{
-             
+                mapfa:false,
+                gongji:false,
+                weiyi:"0",
+                place:[0,803,1451,2121,5978,6918,8198],
+                ttt:false,
+                 wei:0,
+               bgc:"",
+                isbg:0,
+               navall:[
+                   { sid:"#overview-section",
+                     sname:"守望先锋",
+                     sitem:[
+                   "M7.5,2.6c0,0-0.6,0-1.2,0.1L5,3.9v24.3l1.2,1.2h1.3l21.8-12.8v-1.3L7.5,2.6z"
+                   ]
+                   },
+                    { sid:"#heroes-section",
+                     sname:"英雄",
+                     sitem:["M24.6,24.2c-1-2.8-2.7-3.1-5.2-4.1c-0.3-0.1-0.6-0.3-0.8-0.5c-0.5,0-0.8-0.4-1-0.7c-0.9-1.1-1.5-1.4-2.2-2.6c-0.5-1-0.4-1.8,0.3-2.6c3-3.2,2-2.4,1.7-6.1c0-0.1,0-0.1,0-0.2l-0.6-2.1c-0.6-1.3-1.9-2.2-3.6-2.3C9.9,2.6,8.4,4,7.9,5.6c0,0.1-0.1,0.2-0.1,0.3c-0.6,3-1,5.2,1.4,7.8c0.4,0.5,0.8,1,0.6,1.6c-0.7,2-1.9,2.9-3.4,4.6c-0.1-0.1-0.1-0.1-0.2-0.2C6.1,19.8,6,19.9,5.8,20c-0.5,0.3-1.2,0.3-1.8,0.4c-0.4,0.1-0.8,0.3-1.1,0.5c-0.5,0.5-1,1-1.5,1.6C1.2,23,1,23.5,0.8,24l12,6.9h0.3h0.4l11.2-6.5C24.7,24.4,24.6,24.3,24.6,24.2z","M19,13.7c0,0-1.8,1.5-0.3,2.5l1.4,1.4l3,1.4l1.5,0.8l1,0.8l0.9,1.1l0.9,1.6l3.9-2.6c0-0.1,0-0.2-0.1-0.2c-0.8-2.4-2.4-2.7-4.5-3.6c-0.3-0.1-0.5-0.3-0.7-0.5c-0.4,0-0.7-0.3-0.9-0.6c-0.7-1-1.3-1.2-1.9-2.3c-0.4-0.8-0.4-1.6,0.3-2.3c1.4-1.5,1.6-3.4,1.4-5.3c0-0.1,0-0.1,0-0.2l-0.5-1.9c-0.6-1.2-1.7-1.9-3.1-2c-1.6-0.1-2.1,0.1-2.9,0.6c0.8,1,1.8,2.7,1.8,5.2C20.2,7.6,20.7,10.5,19,13.7z"]
+                   },
+                   { sid:"#role-section",
+                     sname:"角色",
+                     sitem:["M25.9,1c0,0-4.2,1.1-9.9,1.1S6.1,1,6.1,1C3.4,0.6,3.2,3.8,3.2,3.8v10.4c0,3,0.5,3.7,0.5,3.7c1.4,2.8,4.4,6.2,4.4,6.2c6.5,7.5,8,7,8,7s1.4,0.5,8-7c0,0,3-3.4,4.4-6.2c0,0,0.5-0.7,0.5-3.7V3.8C28.9,3.8,28.6,0.6,25.9,1z M22.1,15.6c0,0.4-0.3,0.8-0.8,0.8h-3.1v3.1c0,0.4-0.3,0.8-0.8,0.8h-2.8c-0.4,0-0.8-0.3-0.8-0.8v-3.1h-3.1c-0.4,0-0.8-0.3-0.8-0.8v-2.8c0-0.4,0.3-0.8,0.8-0.8h3.1V8.9c0-0.4,0.3-0.8,0.8-0.8h2.8c0.4,0,0.8,0.3,0.8,0.8V12h3.1c0.4,0,0.8,0.3,0.8,0.8V15.6z"]
+                   },
+                   { sid:"#maps-section",
+                     sname:"地图",
+                     sitem:["M16.1,1.8C9.7,1.8,4.4,7.1,4.4,13.5c0,6.4,5.2,11.7,11.7,11.7S27.8,20,27.8,13.5C27.8,7.1,22.6,1.8,16.1,1.8z M16.1,21.6C11.6,21.6,8,18,8,13.5s3.6-8.1,8.1-8.1s8.1,3.6,8.1,8.1S20.6,21.6,16.1,21.6z","M16.6,31.3l0.1-0.2l3.1-7.9l0.2-0.5c0-0.1,0-0.1,0-0.2c0-0.5-0.3-0.9-0.6-0.9h-6.6c-0.4,0-0.6,0.4-0.6,0.9c0,0.1,0,0.2,0,0.3l0.1,0.2l3.2,8l0.1,0.2c0.1,0.2,0.3,0.4,0.5,0.4C16.3,31.7,16.5,31.5,16.6,31.3z"]
+                   },
+                   { sid:"#abilities-section",
+                     sname:"基础知识",
+                     sitem:["M15.24,18.36l-6.56-5.49c0,0-0.2-0.22,0.03-0.41L25.12,1.85c0,0,0.31-0.09,0.37,0.09c0,0,0.14,0.22-0.02,0.39l-9.69,9.93l6.79,6.02c0,0,0.22,0.15,0.05,0.41L6.85,30.15c0,0-0.15,0.12-0.37-0.05c0,0-0.14-0.2,0-0.43L15.24,18.36z"]
+                   },
+                   { sid:"#match-section",
+                     sname:"比赛",
+                     sitem:["M17.9,9.6l-5.6,14.8H9.3L3.7,9.6H7l3.9,10.5l4-10.5H17.9z","M27.3,11.1L25,13.5c-0.7-0.9-1.5-1.3-2.5-1.3c-0.6,0-1,0.2-1.4,0.5c-0.4,0.3-0.6,0.7-0.6,1.2c0,0.5,0.2,0.9,0.6,1.2c0.4,0.3,1.2,0.6,2.3,1c1.2,0.4,2.1,0.8,2.6,1.2c1.1,0.8,1.6,1.9,1.6,3.1c0,1.4-0.6,2.5-1.7,3.4c-1,0.8-2.5,1.3-4.4,1.3c-2,0-3.7-0.6-5.2-1.8l2.2-2.3c1.1,0.9,2.1,1.4,3.1,1.4c0.7,0,1.2-0.2,1.6-0.6c0.3-0.3,0.4-0.7,0.4-1.1c0-0.7-0.5-1.3-1.4-1.7c-0.3-0.2-1.2-0.5-2.5-1c-2.1-0.8-3.1-2.1-3.1-3.9c0-1.5,0.6-2.6,1.9-3.6c1-0.7,2.2-1.1,3.7-1.1c0.9,0,1.8,0.1,2.5,0.4C25.8,10,26.5,10.5,27.3,11.1z"]
+                   },
+                   { sid:"#progress-section",
+                     sname:"奖励",
+                     sitem:["M16.1,5.1h-4.6c0,0-2.1,0.1-2.1,2.1c0,0-0.9,9.2,5.4,13.4v2.4c0,0-4.4,1-4.4,3.9H16C16,26.8,16.1,5,16.1,5.1z","M10,9.5H5.6c0,0-1.5,0-1.5,2.5c0,0-0.1,6.3,9.5,7.3l-1-2.2c0,0-6.6-0.9-6.3-5.8H11L10,9.5z","M16,5.1h4.6c0,0,2.1,0.1,2.1,2.1c0,0,0.9,9.2-5.4,13.4v2.4c0,0,4.4,1,4.4,3.9H16C16,26.8,16,5,16,5.1z","M22.1,9.5h4.4c0,0,1.5,0,1.5,2.5c0,0,0.1,6.3-9.6,7.3l1-2.2c0,0,6.6-0.9,6.3-5.8h-4.7L22.1,9.5z"]
+                   },
+               ]
             }
         },
         methods:{
-
+            attack(){
+              this.mapfa=true;
+              
+            },
+            toTop(){
+                let distance = document.documentElement.scrollTop || document.body.scrollTop; //获得当前高度
+                let step = distance/50; //每步的距离
+                (function jump(){
+                if(distance > 0){
+                distance-=step;
+                window.scrollTo(0,distance);
+                setTimeout(jump,10)
+                }
+                })();
+                },
+        side(index){
+              this.wei=index+1;
+              
+          },
+          sideout(index){
+              this.wei=index+100;
+          },
+          sideon(index){
+            this.isbg=index;
+            
+          },
+          handleScroll () {
+             var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+             
+            if(scrollTop<803){
+                this.isbg=0;
+                 this.ttt=false;
+            }
+            else if(scrollTop>803&&scrollTop<1451){
+                this.isbg=1;
+                 this.ttt=true;
+                
+            }
+            else if(scrollTop>1451&&scrollTop<2121){
+                this.isbg=2;
+                 this.ttt=true;
+            }
+             else if(scrollTop>2121&&scrollTop<5978){
+                this.isbg=3;
+                 this.ttt=true;
+            }
+             else if(scrollTop>5978&&scrollTop<6918){
+                this.isbg=4;
+                 this.ttt=true;
+            }
+             else if(scrollTop>6918&&scrollTop<8198){
+                this.isbg=5;
+                 this.ttt=true;
+            }
+             else if(scrollTop>8198){
+                this.isbg=6;
+                 this.ttt=true;
+            } 
+                }
         },
         watch:{
           
         },
         created(){
-
+        
         },
+        mounted () {
+  window.addEventListener('scroll', this.handleScroll)
+  var sss=setInterval(()=> { 
+        this.weiyi-=1;
+        if(this.weiyi<-150){
+            clearInterval(sss)
+        }
+      }, 20)
+},
         components:{
-
+            'app-footer':footer,
+           'app-headers':headers
         }
    }
  </script>
 <style>
+ .top{
+     transition: all 1s ease-in;
+ }
+.bg{
+  background-color: #00c3ff !important;
+}
+.navl{
+    left:0 !important;
+}
     body {
         color: #333;
         fill: #333;
@@ -1842,6 +1896,7 @@
         font-size: 20px;
         line-height: 80px;
         font-style: italic;
+        position: relative;
     }
     .game .progress-section:not(li) .award-wrap .list ul li span.common {
         color: #fff;
@@ -1956,6 +2011,7 @@
     .sub-nav .is-menu-hidden .sub-nav-item {
         left: 100%;
         margin-left: -3.6rem;
+        transition: all .1s ease-in;
     }
     .sub-nav .sub-nav-item, .sub-nav .sub-nav-item-small {
         display: block;
@@ -1992,10 +2048,10 @@
         padding: .3em 1.2em;
         font-family: "Open Sans","microsoft yahei",sans-serif;
         font-size: 1.09rem;
-        text-transform: none;
+        text-transform: none !;
         font-weight: 700;
-        color: #f0edf2;
-        opacity: .5;
+        color: #fff;
+        
     }
     .sub-nav .sub-nav-icon * {
         fill: #f0edf2;
@@ -2090,5 +2146,11 @@
 }
 .AboutRole-section p{
       color: #8f8f94;
+}
+.map{
+    display: none;
+}
+.att{
+    display: block ;
 }
 </style>

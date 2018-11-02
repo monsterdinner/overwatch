@@ -1,388 +1,74 @@
 <template>
 <div id="app">
-     <div class="navbar">
-      <div class="navbar-container">
-          <nav class="navbar-desktop">
-              <div class="navbar-desktopOverlay" v-show="fal3" @click="black"></div>
-              <a href="#" class="navbar-logo"></a>
-              <div class="navbar-items">
-                  <a href="#"  class="navbar-item" @click="shownav">
-                      <div class="navbar-label nav-shadow" >游戏</div>
-                      <div class="navbar-icon"></div>
-                  </a>
-                  <a href="#" class="navbar-item" ><div class="navbar-label">商城</div></a>
-                  <a href="#" class="navbar-item"><div class="navbar-label">新闻</div></a>
-                  <a href="#" class="navbar-item"  @click="shownav1"><div class="navbar-label">电子竞技</div>
-                      <div class="navbar-icon"></div></a>
-                  <a href="#" class="navbar-item"><div class="navbar-label">暴雪嘉年华</div></a>
-              </div>
-              <div class="navbar-right">
-                  <a href="#" class="navbar-item">
-                      <div class="navbar-label">支持</div>
-                  </a>
-                   <a href="#" class="navbar-item"  @click="shownav2">
-                  <div class="navbar-label">你的通行证</div>
-                  <div class="navbar-icon"></div>
-              </a>
-              </div>
-          </nav>
-      </div>
-      <!--游戏-->
-      <div class="navbar-modals Navbar" v-show="fal">
-          <div class="nav-modal">
-              <div class="navbar-tick" style="left: 169.812px;">
-                  <div class="Navbar-tickInner" style="opacity: 0.717649;"></div>
-              </div>
-              <div class="navbar-modalContent">
-                  <div class="navbar-gamePublishers">
-                      <div class="navbar-gamePublisher">
-                          <nav class="navbar-posters Navbar-imagePanel">
-                              <a href="#" class="Navbar-poster">
-                                  <img src="http://127.0.0.1:3001/img/card-overwatch.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-world-of-warcraft.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-hearthstone.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-heroes-of-the-storm.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-starcraft.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-starcraft-remastered.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                              <a href="#" class="Navbar-poster">
-                                  <img src="img/card-diablo.jpg" class="Navbar-posterImage" alt=""/>
-                              </a>
-                          </nav>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!--电子竞技-->
-      <div class="navbar-modals Navbar"  v-show="fal1">
-          <div class="nav-modal" >
-              <div class="navbar-tick" style="left: 395.812px;"><div class="Navbar-tickInner" style="opacity: 0.717649;"></div></div>
-              <div class="navbar-modalContent">
-                  <div class="navbar-esportsLogos" >
-                      <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="img/esports-ow.png" alt=""/>
-                          <div class="navbar-esportLabel" >守望先锋电竞</div>
-                      </a>
-                      <div class="navbar-esport-sub">
-                          <a href="#" class="navbar-esport-link">
-                              <img src="img/esports-overwatch.png" alt=""/>
-                          </a>
-                          <a href="#" class="navbar-esport-link">
-                              <img src="img/esports-overwatch-world-cup.png" alt=""/>
-                          </a>
-                          <a href="#" class="navbar-esport-link">
-                              <img src="img/esports-contenders.png" alt=""/>
-                          </a>
-                      </div>
-                      <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="img/esports-gold.png" alt=""/>
-                          <div class="navbar-esportLabel">炉石传说黄金系列赛</div>
-                      </a>
-                      <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="img/esports-heroes.png" alt=""/>
-                          <div class="navbar-esportLabel">HGC黄金风暴联赛</div>
-                      </a>
-                      <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="img/esports-sc2-wcs.png" alt=""/>
-                          <div class="navbar-esportLabel">星际争霸II黄金职业联赛</div>
-                      </a>
-                      <a href="#" class="Navbar-esport ow-site  animation-delay-1">
-                          <img src="img/wariii .png" alt=""/>
-                          <div class="navbar-esportLabel">魔兽争霸III黄金联赛</div>
-                      </a>
-                  </div>
-              </div>
-              <nav class="navbar-modalSection">
-                  <a href="#" class="navbar-gameMenuItem">
-                      <div class="Navbar-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" focusable="false"><use xlink:href="#Navbar-icon-grid9"><g id="Navbar-icon-grid9"><rect x="26" y="26" width="12" height="12"></rect><rect x="42" y="10" width="12" height="12"></rect><rect x="26" y="42" width="12" height="12"></rect><rect x="10" y="26" width="12" height="12"></rect><rect x="26" y="10" width="12" height="12"></rect><rect x="10" y="42" width="12" height="12"></rect><rect x="42" y="42" width="12" height="12"></rect><rect x="42" y="26" width="12" height="12"></rect><rect x="10" y="10" width="12" height="12"></rect></g></use></svg>
-                      </div>
-                      <div class="navbar-gameMenuItemLabel">更多赛事</div>
-                  </a>
-              </nav>
-          </div>
-      </div>
-      <!--登录-->
-      <div class="navbar-constrained" v-show="fal2">
-          <div class="navbar-modal Navbar-accountDropdown">
-              <div class="navbar-tick" style="left: 292px;">
-                  <div class="Navbar-tickInner" style="opacity: 0.717649;"></div>
-              </div>
-              <div class="Navbar-modalContent">
-                  <div class="Navbar-accountDropdownLoggedOut">
-                     <div class="Navbar-modalSection1"><a href="#" class="Navbar-accountDropdownButtonLink"><button class="Navbar-button is-full">登录</button></a></div>
-
-                      <a href="#" class="Navbar-accountDropdownLink Navbar-accountDropdownSettings">
-                          <div class="Navbar-accountDropdownLinkIcon zhanghao"></div>
-                          <div class="Navbar-accountDropdownLinkLabel">账号</div>
-                      </a>
-                      <a href="#" class="Navbar-accountDropdownLink Navbar-accountDropdownSettings">
-                          <div class="Navbar-accountDropdownLinkIcon zhuce"></div>
-                          <div class="Navbar-accountDropdownLinkLabel">注册</div>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-<div class="navbar1" id="navbar1" :style="Snavbar">
-        <nav class="navbar1-main" :style="Snavbarmain">
-            <div class="nav-left">
-                <router-link to="home" class="nav-logo"></router-link>
-            </div>
-            <ul class="nav-menu">
-                <app-header :title="game" :navfor="gaishu"></app-header>
-                <li>
-                    <a href="#" class="nav-btn">
-                        英雄
-                    </a>
-                </li>  
-                 <app-header :title="huodong" :navfor="active"></app-header> 
-                <li>
-                    <a href="#" class="nav-btn">
-                        视频图片
-                    </a>
-                </li>
-                <app-header :title="news" :navfor="xingwen"></app-header> 
-                <li>
-                    <a href="#" class="nav-btn">
-                        下载
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-btn">
-                        生涯数据
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-btn">
-                        电子竞技
-                    </a>
-                </li>
-                 <app-header :title="shequ" :navfor="shequ1"></app-header> 
-            </ul>
-            <div class="nav-right">
-                <a href="#" class="nav-btn m-orange">购买</a>
-            </div>
-            <div class="nav-border"></div>
-        </nav>
-    </div>
-    <router-view></router-view>
-    <div id="footer" class="ow-footer">
-    <div class="footer">
-        <div id="f-business" class="f-cb">
-            <p class="f-cs">
-                <a href="#">
-                    <span class="icon icon-1"></span>在线客服
-                </a>
-                <a href="#">
-                    <span class="icon icon-2"></span>反馈
-                </a>
-                <a href="#">
-                    <span class="icon icon-3"></span>加入我们
-                </a>
-            </p>
-        </div>
-        <div class="cprt">
-            <a href="#" class="logo_bz"></a>
-               <a href="#" class="logo_ne"></a>
-            <div class="info">
-                <ul class="clearFix">
-                    <li>
-                        <a href="#">隐私</a>|
-                    </li>
-                    <li>
-                        <a href="#">法律条款</a>|
-                    </li>
-                    <li>
-                        <a href="#">API</a>
-                    </li>
-                </ul>
-                <p>©2018 暴雪娱乐有限公司版权所有
-                <span>由上海网之易网络科技发展有限公司运营</span>
-               <a href="#"> 著作权侵权</a>
-                    &nbsp;|&nbsp;
-         <span>新广出审[2016]378号</span>
-                </p>
-                <p><span id="js_wenjinwang">文网游进字[2016]0025号</span>&nbsp;|&nbsp;<a href="#" >沪网文号〔2017〕9633-727号</a>&nbsp;|&nbsp;<a href="#" >增值电信业务经营许可证编号：沪B2－20080012</a></p>
-                <p class="integrity">
-                    <a href="#"><img src="img/cprtFpolice.png" alt=""/></a>
-                    <a href="#"><img src="img/cprtFzx110.png" alt=""/></a>
-                    <a href="#"><img src="img/sgs-icon.png" alt=""/></a>
-                    <a href="#"><img src="img/cprtFicon20120516.png" alt=""/></a>
-                    <a href="#"><img src="img/cprtFemark.png" alt=""/></a>
-                    <span>|  适龄提示：适合13岁及以上使用  </span>
-                    <a href="#">家长监护工程></a>
-                </p>
-            </div>
-            <div></div>
-        </div>
-        <p class="tips">
-            积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。
-        </p>
-    </div>
-</div>
+<transition :name="transitionName">
+  <router-view></router-view>
+</transition>
     </div>
 </template>
 <script type="text/ecmascript-6">
-import header from './components/header'
+
  export default{
         data(){
             return{
-                 game:"游戏",
-                 fal:false,
-                  fal1:false,
-                 fal2:false,
-                  fal3:false,
-                 Snavbar:{},
-                 Snavbarmain:{},
-                 gaishu:[
-                     {
-                         word:"概述",
-                         site:"summarize"
-                     },
-                      {
-                         word:"赞赏系统",
-                         site:"summarize"
-                     }
-                 ],
-                 huodong:"活动",
-                 active:[
-                      {
-                         word:"夏季运动会",
-                         site:"summarize"
-                     },
-                      {
-                         word:"行动档案",
-                         site:"summarize"
-                     },
-                      {
-                         word:"欢度新春",
-                         site:"summarize"
-                     },
-                      {
-                         word:"雪国仙境",
-                         site:"summarize"
-                     },
-                      {
-                         word:"万圣夜惊魂",
-                         site:"summarize"
-                     },
-                      {
-                         word:"周年庆典",
-                         site:"summarize"
-                     },
-                      {
-                         word:"国王大道",
-                         site:"summarize"
-                     }
-                 ],
-                 news:"新闻",
-                 xingwen:[
-                      {
-                         word:"新闻",
-                         site:"summarize"
-                     },
-                      {
-                         word:"补丁",
-                         site:"summarize"
-                     }
-                 ],
-                shequ:"社区",
-                shequ1:[
-                    {
-                         word:"我身边的英雄",
-                         site:"summarize"
-                     },
-                      {
-                         word:"论坛",
-                         site:"summarize"
-                     }
-                ]
-            };
+                transitionName:""
+            }
         },
         methods:{
-         handleScroll () {
-           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-           //console.log(scrollTop)
-           var offsetTop = document.querySelector('#navbar1').offsetTop
-           if(scrollTop>44){
-                this.Snavbar={top:"0"}
-                this.Snavbarmain={marginTop:"0px", marginLeft: "0px", marginRight: "0px"}
-           }else{
-           this.Snavbar={top:"44px"}
-                           this.Snavbarmain={marginTop:"20px", marginLeft: "20px", marginRight: "20px"}
-           }
-         },
-              shownav(){
-             if(this.fal==false){
-             this.fal=true;
-             this.fal1=false;
-             this.fal2=false;
-             this.fal3=true;
-             }else if(this.fal==true){
-             this.fal=false;
-             this.fal3=false;
-             }
-             },
-         shownav1(){
-             if(this.fal1==false){
-             this.fal1=true;
-             this.fal=false;
-             this.fal2=false;
-             this.fal3=true;
-             }else if(this.fal1==true){
-             this.fal1=false;
-             this.fal3=false;
-             }
-             },
-             shownav2(){
-               if(this.fal2==false){
-               this.fal2=true;
-               this.fal=false;
-               this.fal1=false;
-               this.fal3=true;
-               }else if(this.fal2==true){
-              this.fal2=false;
-               this.fal3=false;
-              }
-               },
-               black(){
-                 if(this.fal3==true){
-                  this.fal3=false;
-                  this.fal1=false;
-                  this.fal2=false;
-                  this.fal=false;
-               }
-               }
+      
         },
         created(){
 
         },
-        mounted () {
+     watch: {//使用watch 监听$router的变化
+         $route(to, from) {
+      //如果to索引大于from索引,判断为前进状态,反之则为后退状态
+      if(to.meta.index > from.meta.index){
+        //设置动画名称
+        this.transitionName = 'slide-left';
+      }else{
+           this.transitionName = 'slide-right';
+        }
+         }
+        },
+     mounted () {
             window.addEventListener('scroll', this.handleScroll)
           },
         components:{
-               "app-header":header
+              
         },
         destroyed () {
           window.removeEventListener('scroll', this.handleScroll)
            showToggle()
-        }
-   }
+        } 
+}
  </script>
 <style>
+body{
+    overflow-x: hidden;
+}
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 1000ms;
+ 
+}
+.slide-right-enter {
+  opacity: 0;
+  
+}
+.slide-right-leave-active {
+  opacity: 0;
+ ;
+}
+.slide-left-enter {
+  opacity: 0;
+ 
+}
+.slide-left-leave-active {
+  opacity: 0;
+
+}
 .navbar{
     position: absolute;
     top: 0;
@@ -672,6 +358,20 @@ text-align: center;
     color: rgba(255,255,255,.7);
     text-align: center;
 }
+
+.navbar-modalContent .navbar-esportsLogos .Navbar-esport:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+.navbar-modalContent .navbar-esportsLogos .navbar-esport-sub.open .navbar-esport-link:hover {
+    background-color: rgba(255,255,255,.05);
+    transition: all .4s ease;
+}
+.navbar-modalContent .navbar-esportsLogos .navbar-esport-sub.open {
+    width: 100px;
+    opacity: 1;
+    transition: all .4s ease;
+}
 .navbar-esport-sub{
     width: 0;
     opacity: 0;
@@ -684,6 +384,12 @@ text-align: center;
     border-left: 1px solid rgba(0,0,0,.2);
     border-right: 1px solid rgba(0,0,0,.2);
     transition: all .4s ease;
+}
+.nav-modal .navbar-gameMenuItem:hover {
+    color: #fff;
+}
+ .nav-modal .navbar-gameMenuItem .Navbar-icon:hover{
+    color: #00c6ff;
 }
 .navbar-esport-link{
     display: block;
@@ -1655,7 +1361,7 @@ p {
     font-size: 1.6rem;
     line-height: 1.5;
 }
-.body.home .spotlight:before {
+.home .spotlight:before {
     content: '';
     position: absolute;
     top: 59%;
@@ -1757,7 +1463,6 @@ p {
     overflow: hidden;
     border-radius: 7px;
     transform: skew(25rad);
-
 }
 .hero-portrait-image{
     display: inline-block;
@@ -1848,5 +1553,20 @@ p {
     font-variant: normal;
     line-height: normal;
     letter-spacing: .8px;
+}
+.Navbar-poster img:hover {
+    -webkit-filter: brightness(115%) contrast(90%); 
+     filter: brightness(115%) contrast(90%);
+}
+.Navbar-button:hover{
+      background-color: #00aeff;
+    border: 1px solid #00aeff;
+    text-decoration: none;
+    color: #fff;
+}
+.Navbar-accountDropdownLink:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+    background-position: -141px -38px;
 }
 </style>
