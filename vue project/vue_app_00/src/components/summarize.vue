@@ -2147,10 +2147,4 @@ import headers from './headers'
 .AboutRole-section p{
       color: #8f8f94;
 }
-.map{
-    display: none;
-}
-.att{
-    display: block ;
-}
 </style>
