@@ -166,9 +166,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-btn">
-                        电子竞技
-                    </a>
+                   <router-link to="esports" class="nav-btn"> 电子竞技</router-link>
                 </li>
                  <app-header :title="shequ" :navfor="shequ1"></app-header> 
             </ul>

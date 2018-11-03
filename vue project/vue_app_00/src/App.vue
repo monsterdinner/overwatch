@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-<transition :name="transitionName">
+<transition>
   <router-view></router-view>
 </transition>
     </div>
@@ -1371,25 +1371,7 @@ p {
     background-image: url(img/glow.png);
     background-size: cover;
 }
-.flex-container{
-    -webkit-box-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    width: 100%;
-    min-height: 200px;
-    position: absolute;
-    padding: 10px 0 15px;
-    top: calc(50% - 100px);
-    text-align: right;
-    background-image: linear-gradient(90deg,rgba(42,55,81,0) 0,rgba(42,55,81,.8) 25%,rgba(42,55,81,.8) 75%,rgba(42,55,81,0));
-    background-position: 50%;
-    background-size: 1920px auto;
-    z-index: 0;
-}
+
 .flex-item{
     -webkit-box-flex:0 ;
     flex-grow: 0;

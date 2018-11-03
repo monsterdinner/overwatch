@@ -4,6 +4,7 @@ import HelloContainer from "./components/HelloWorld.vue";
 import Index from "./components/Index.vue";
 import Summarize from './components/summarize.vue';
 import Esports from './components/esports.vue'
+import Winter from './components/winter.vue'
 //1.引入自定义组件
 
 
@@ -16,27 +17,24 @@ export default new Router({
     {
       path:'/',
     redirect:"/home",
-    name: 'Home',
-    meta:{index:0},
   },
     {
       path:'/home',
     component:Index,
-    name: 'Home',
-      meta:{index:0},
   },
     {
       path:'/summarize',
     component:Summarize,
-    name: 'Summarize',
-      meta:{index:1},
   },
   {
     path:'/esports',
   component:Esports,
-  name: 'Esports',
-    meta:{index:2},
+},
+{
+  path:'/winter',
+component:Winter,
 }
+
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

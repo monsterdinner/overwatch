@@ -138,12 +138,14 @@
          </div>
      </div>
  </section>
+ <app-top></app-top>
 <app-footer></app-footer>
 </div>
 </template>
 <script type="text/ecmascript-6">
 import footer from './footer'
 import headers from './headers'
+import top from './top'
  export default{
 
         data(){
@@ -348,7 +350,8 @@ import headers from './headers'
         },
         components:{
            'app-footer':footer,
-           'app-headers':headers
+           'app-headers':headers,
+           'app-top':top
         }
    }
  </script>
@@ -373,5 +376,24 @@ import headers from './headers'
     border-radius: .3rem;
     background-color: #f0edf2;
     color: #333;
+}
+.app_index .flex-container{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 200px;
+    position: absolute;
+    padding: 10px 0 15px;
+    top: calc(50% - 100px);
+    text-align: right;
+    background-image: linear-gradient(90deg,rgba(42,55,81,0) 0,rgba(42,55,81,.8) 25%,rgba(42,55,81,.8) 75%,rgba(42,55,81,0));
+    background-position: 50%;
+    background-size: 1920px auto;
+    z-index: 0;
 }
 </style>

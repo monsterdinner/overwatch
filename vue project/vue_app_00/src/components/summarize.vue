@@ -988,31 +988,33 @@
     </section>
     <nav class="show-for-md sub-nav">
         <ul class="sub-nav-menu is-menu-hidden" id="sub-nav-menu">
-              <li class="sub-nav-item" :class="{bg:isbg==index,navl:wei==index+1}" @mouseover="side(index)" @mouseout="sideout(index)" @click="sideon(index)"  v-for="(item,index) in navall" :key="index">
-                <a class="sub-nav-btn active" :href="item.sid" >
+              <li class="sub-nav-item" :class="{bg:isbg==index,navl:wei==index+1}" @mouseover="side(index)" @mouseout="sideout(index)" @click="sideon(index);followEleView($event)"  v-for="(item,index) in navall" :key="index">
+                <a class="sub-nav-btn active" href="javascript:;">
                     <svg class="icon sub-nav-icon" viewBox="0 0 32 32">
                          <path v-for="(itema,indexa) in item.sitem" :key="indexa" :d="itema"></path>
-                    </svg><span class="sub-nav-text">
+                    </svg><span class="sub-nav-text"  :oppositeDivId="allId[index]">
                         {{item.sname}}
                         </span></a>
             </li>
         </ul>
     </nav>
-     <a href="#top"  id="gotop" @click="toTop" style="display: inline;"  v-show="ttt" class="top">top</a>
+    <app-top></app-top>
       <app-footer></app-footer> 
 </div>
 </template>
 <script>
 import footer from './footer'
 import headers from './headers'
+import top from './top'
  export default{
         data(){
             return{
+                allId:["overview-section","heroes-section","role-section","maps-section","abilities-section","match-section","progress-section"],
                 mapfa:false,
                 gongji:false,
-                weiyi:"0",
+                 weiyi:"0",
                 place:[0,803,1451,2121,5978,6918,8198],
-                ttt:false,
+                ida:{},
                  wei:0,
                bgc:"",
                 isbg:0,
@@ -1047,25 +1049,59 @@ import headers from './headers'
                      sname:"奖励",
                      sitem:["M16.1,5.1h-4.6c0,0-2.1,0.1-2.1,2.1c0,0-0.9,9.2,5.4,13.4v2.4c0,0-4.4,1-4.4,3.9H16C16,26.8,16.1,5,16.1,5.1z","M10,9.5H5.6c0,0-1.5,0-1.5,2.5c0,0-0.1,6.3,9.5,7.3l-1-2.2c0,0-6.6-0.9-6.3-5.8H11L10,9.5z","M16,5.1h4.6c0,0,2.1,0.1,2.1,2.1c0,0,0.9,9.2-5.4,13.4v2.4c0,0,4.4,1,4.4,3.9H16C16,26.8,16,5,16,5.1z","M22.1,9.5h4.4c0,0,1.5,0,1.5,2.5c0,0,0.1,6.3-9.6,7.3l1-2.2c0,0,6.6-0.9,6.3-5.8h-4.7L22.1,9.5z"]
                    },
-               ]
+               ],
+                 clickToTimer:null,
+                clickToTop:null
             }
         },
         methods:{
+               //追随元素位置,调到可见位置
+            followEleView(e){
+               
+                
+                if(this.clickToTimer){
+                    cancelAnimationFrame(this.clickToTimer);
+                }            
+                var ele=e.target;
+                if(ele.nodeName=="SPAN"){
+                     var oppositeDivId=ele.getAttribute('oppositeDivId');
+                console.log( oppositeDivId);
+                 console.log(ele);
+                var oppositeDiv=document.getElementById(oppositeDivId);
+                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                var offsetTop=oppositeDiv.offsetTop;
+                var step=Math.abs(scrollTop-offsetTop)/20;
+                var self=this;
+                self.clickToTimer = requestAnimationFrame(function fn(){
+                    var ofp= oppositeDiv.offsetTop;
+                    var stp= document.body.scrollTop || document.documentElement.scrollTop;
+                    var dis=ofp-stp;
+                    if(dis==0){
+                        cancelAnimationFrame(self.clickToTimer);
+                        self.clickToTimer=null;
+                    }else if(dis<step&&dis>-step){
+                        document.body.scrollTop = document.documentElement.scrollTop=ofp;
+                        cancelAnimationFrame(self.clickToTimer);
+                        self.clickToTimer=null;
+                    }else{
+                        if(dis<=-step){
+                            scrollTop-=step
+                        }else if(dis>=step){
+                            scrollTop+=step;
+                        }
+                        document.body.scrollTop = document.documentElement.scrollTop = scrollTop;
+                        self.clickToTimer = requestAnimationFrame(fn);
+                    }             
+                });
+                }
+               
+                
+            },
             attack(){
               this.mapfa=true;
               
             },
-            toTop(){
-                let distance = document.documentElement.scrollTop || document.body.scrollTop; //获得当前高度
-                let step = distance/50; //每步的距离
-                (function jump(){
-                if(distance > 0){
-                distance-=step;
-                window.scrollTo(0,distance);
-                setTimeout(jump,10)
-                }
-                })();
-                },
+          
         side(index){
               this.wei=index+1;
               
@@ -1114,10 +1150,7 @@ import headers from './headers'
         watch:{
           
         },
-        created(){
-        
-        },
-        mounted () {
+         mounted () {
   window.addEventListener('scroll', this.handleScroll)
   var sss=setInterval(()=> { 
         this.weiyi-=1;
@@ -1126,16 +1159,19 @@ import headers from './headers'
         }
       }, 20)
 },
+        created(){
+        
+        },
+       
         components:{
             'app-footer':footer,
-           'app-headers':headers
+           'app-headers':headers,
+           'app-top':top
         }
    }
  </script>
 <style>
- .top{
-     transition: all 1s ease-in;
- }
+
 .bg{
   background-color: #00c3ff !important;
 }
@@ -2009,9 +2045,11 @@ import headers from './headers'
         transform: translateY(-50%);
     }
     .sub-nav .is-menu-hidden .sub-nav-item {
-        left: 100%;
+        left: 110%;
         margin-left: -3.6rem;
         transition: all .1s ease-in;
+        width: 117px;
+        
     }
     .sub-nav .sub-nav-item, .sub-nav .sub-nav-item-small {
         display: block;
@@ -2045,13 +2083,19 @@ import headers from './headers'
     .sub-nav .sub-nav-text {
         display: inline-block;
         vertical-align: middle;
-        padding: .3em 1.2em;
         font-family: "Open Sans","microsoft yahei",sans-serif;
         font-size: 1.09rem;
-        text-transform: none !;
+        text-transform: none;
         font-weight: 700;
         color: #fff;
-        
+            width: 117px;
+    height: 36px;
+    left: 3px;
+    position: absolute;
+    text-align: center;
+    line-height: 36px;
+    right: auto;
+        z-index: 1000;
     }
     .sub-nav .sub-nav-icon * {
         fill: #f0edf2;
@@ -2147,4 +2191,5 @@ import headers from './headers'
 .AboutRole-section p{
       color: #8f8f94;
 }
+
 </style>
