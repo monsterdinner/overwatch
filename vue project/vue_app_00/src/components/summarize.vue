@@ -1154,7 +1154,7 @@ import top from './top'
   window.addEventListener('scroll', this.handleScroll)
   var sss=setInterval(()=> { 
         this.weiyi-=1;
-        if(this.weiyi<-150){
+        if(this.weiyi<-5000){
             clearInterval(sss)
         }
       }, 20)

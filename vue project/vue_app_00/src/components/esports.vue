@@ -45,15 +45,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
+                                <!-- <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
                                     <svg viewBox="0 0 64 64">
                                         <title>ui_info</title>
                                         <path d="M48,32A16,16,0,1,1,32,16,16,16,0,0,1,48,32ZM36.8,42.2H36l-.6-.2a1.3,1.3,0,0,1-.6-.5,1.6,1.6,0,0,1-.2-.9V28.8l-.2-.2-7.2.4V30l1,.2.8.3.6.6a1.7,1.7,0,0,1,.2.9v8.5a1.7,1.7,0,0,1-.2.9,1.2,1.2,0,0,1-.7.5H27.5v1.1h9.3Zm-3-20.8a3,3,0,0,0-4.1,0,2.5,2.5,0,0,0,0,3.8,3,3,0,0,0,4.1,0,2.5,2.5,0,0,0,.9-1.9A2.5,2.5,0,0,0,33.8,21.4Z"></path>
                                     </svg>
-                                </div>
-                            </div>
-                            <div data-js="horizontal-accordion-column" data-id="contendersTrials" class="HorizontalAccordion-column LadderInfoBlock--arrow SidewaysAccordion-column--arrow is-viewable is-hover">
-                                <div class="HorizontalAccordion-media">
+                                  </div>
+                                   </div>
+                                   <div data-js="horizontal-accordion-column" data-id="contendersTrials"        class="HorizontalAccordion-column LadderInfoBlock--arrow        SidewaysAccordion-column--arrow is-viewable is-hover">
+                                  <div class="HorizontalAccordion-media">
                                     <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
                                         <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owct-1.png">
                                     </div>
@@ -65,14 +65,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
-                                <svg data-js="horizontal-accordion-icon" viewBox="0 0 64 64">
+                             <div data-js="horizontal-accordion-icon"        class="HorizontalAccordion-icon">
+                                  <svg data-js="horizontal-accordion-icon" viewBox="0 0 64 64">
                                     <title>ui_info</title>
                                     <path d="M48,32A16,16,0,1,1,32,16,16,16,0,0,1,48,32ZM36.8,42.2H36l-.6-.2a1.3,1.3,0,0,1-.6-.5,1.6,1.6,0,0,1-.2-.9V28.8l-.2-.2-7.2.4V30l1,.2.8.3.6.6a1.7,1.7,0,0,1,.2.9v8.5a1.7,1.7,0,0,1-.2.9,1.2,1.2,0,0,1-.7.5H27.5v1.1h9.3Zm-3-20.8a3,3,0,0,0-4.1,0,2.5,2.5,0,0,0,0,3.8,3,3,0,0,0,4.1,0,2.5,2.5,0,0,0,.9-1.9A2.5,2.5,0,0,0,33.8,21.4Z"></path>
                                 </svg>
                                  </div>
-                            </div>
-                            <div data-js="horizontal-accordion-column" data-id="contenders" class="HorizontalAccordion-column LadderInfoBlock--arrow SidewaysAccordion-column--arrow is-viewable is-hover">
+                                   </div>
+                                   <div data-js="horizontal-accordion-column" data-id="contenders"        class="HorizontalAccordion-column LadderInfoBlock--arrow        SidewaysAccordion-column--arrow is-viewable is-hover">
                                 <div class="HorizontalAccordion-media">
                                     <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
                                         <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owc-1.png">
@@ -92,7 +92,7 @@
                                 </svg>
                                 </div>
                             </div>
-                            <div data-js="horizontal-accordion-column" data-id="overwatchLeague" class="HorizontalAccordion-column is-viewable CarouselSplit-item--overwatchLeague">
+                            <div data-js="horizontal-accordion-column" data-id="overwatchLeague" class="HorizontalAccordion-column is-viewable CarouselSplit-item--overwatchLeague"> -->
                                 <div class="HorizontalAccordion-media">
                                     <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
                                         <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owl-1.png">
@@ -644,5 +644,22 @@ svg:not(:root) {
 }
 .u-center-mobile {
     margin-left: 0;
+}
+.media-card:focus, .media-card:hover {
+    color: #f0edf2;
+}
+.media-card:focus, .media-card:hover {
+    transition: all .1s cubic-bezier(.075,.82,.165,1);
+    border-color: #fff;
+}
+.media-card:focus, .media-card:hover {
+    color: #f6f6f6;
+    z-index: 30;
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+}
+.youtubePlayer-preview:hover>.media-card:after {
+    background-image: url(http://overwatch.nos.netease.com/1/assets/img/icons/youtube-btn-wh.png);
 }
 </style>

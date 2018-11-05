@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-<transition>
+<transition name='fade'>
   <router-view></router-view>
 </transition>
     </div>
@@ -43,6 +43,30 @@
 }
  </script>
 <style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 1s;
+    }
+    .fade-enter, .fade-leave-to  {
+      opacity: 0;
+    }
+
+    .bounce-enter-active {
+      animation: bounce-in 1s;
+    }
+    .bounce-leave-active {
+      animation: bounce-in 1s reverse;
+    }
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 body{
     overflow-x: hidden;
 }

@@ -144,24 +144,24 @@
             <ul class="nav-menu">
                 <app-header :title="game" :navfor="gaishu"></app-header>
                 <li>
-                    <a href="#" class="nav-btn">
+                    <a href="javascript:void(0);" class="nav-btn">
                         英雄
                     </a>
                 </li>  
                  <app-header :title="huodong" :navfor="active"></app-header> 
                 <li>
-                    <a href="#" class="nav-btn">
+                    <a href="javascript:void(0);" class="nav-btn">
                         视频图片
                     </a>
                 </li>
                 <app-header :title="news" :navfor="xingwen"></app-header> 
                 <li>
-                    <a href="#" class="nav-btn">
+                    <a href="javascript:void(0);" class="nav-btn">
                         下载
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-btn">
+                    <a href="javascript:void(0);" class="nav-btn">
                         生涯数据
                     </a>
                 </li>
@@ -171,7 +171,7 @@
                  <app-header :title="shequ" :navfor="shequ1"></app-header> 
             </ul>
             <div class="nav-right">
-                <a href="#" class="nav-btn m-orange">购买</a>
+                <a href="javascript:void(0);" class="nav-btn m-orange">购买</a>
             </div>
             <div class="nav-border"></div>
         </nav>

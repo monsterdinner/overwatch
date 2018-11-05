@@ -38,7 +38,7 @@
                      <a href="#" class="bg" style="background-image: url(../img/images0001e.jpg);"></a>
                      <div class="content">
                          <h3 class="title h6">
-                             <a href="#" >
+                             <a href="#" style="font-size:1.6rem">
                                  2018“万圣夜惊魂”现已上线 购50箱补给送10箱
                              </a>
                          </h3>
@@ -49,10 +49,10 @@
          <div class="grid-item">
              <div class="box">
                  <div class="container">
-                     <a href="#" class="bg" style="background: url(../img/images3ae.jpg);"></a>
+                     <a href="#" class="bg" style="background-image: url(../img/images3ae.jpg);"></a>
                      <div class="content">
-                         <h3 class="title h6">
-                             <a href="#">
+                         <h3 class="title h6" >
+                             <a href="#" style="font-size:1.6rem">
                                  暴雪战网商城现已支持花呗
                              </a>
                          </h3>
@@ -91,7 +91,7 @@
         <div class="u-max-width-container">
             <h2 class="intro-heading">各具特色的英雄</h2>
             <div class="intro-text">
-                <p>
+                <p style="color:#333">
                     不论喜欢哪种游戏方式，你总能找到适合自己玩法的英雄。
                     <br/>
                     掌握他们独特的技能玩法，享受《守望先锋》的无穷乐趣！

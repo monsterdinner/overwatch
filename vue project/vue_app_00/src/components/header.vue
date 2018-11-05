@@ -1,6 +1,6 @@
 <template>
     <li @mouseover="showToggle" @mouseout="showout" >
-       <a href="#" class="nav-btn" :class="{ 'mm-has-children':hasError ,'m-has-children': isActive }" >
+       <a href="javascript:void(0);" class="nav-btn" :class="{ 'mm-has-children':hasError ,'m-has-children': isActive }" >
            {{title}}
        </a>
        <ul class="nav-sub-menu m-sub-menu" v-show="isSubShow">
